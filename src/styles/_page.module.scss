@@ -1,0 +1,11 @@
+@import '_variables.scss';
+
+.main{
+  padding: 0 150px;
+  counter-reset: section 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+}
+
