@@ -1,0 +1,68 @@
+@import '../_variables.scss';
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  top: 0;
+  padding: 0 5px;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  z-index: 100;
+  counter-reset: item 0;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+}
+
+.list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.listitem{
+  margin: 0 5px;
+  position: relative;
+  counter-increment: item 1;
+}
+
+.listlink{
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+
+  &::before{
+    content: '0' counter(item) '.';
+    margin-right: 5px;
+    text-align: right;
+
+    &::selection{
+
+    }
+  }
+}
