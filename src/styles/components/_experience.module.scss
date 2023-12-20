@@ -1,28 +1,97 @@
 @import '../_variables.scss';
 
-.header{
-  display: flex;
-  white-space: nowrap;
-  width: 100%;
-  margin: 10px 0 40px;
-  position: relative;
-  align-items: center;
+.experience{
+  $self: &;
 
-  &::before{
-    content: '0' counter(section) '.';
-    counter-increment: section 1;
-    color: $color_02;
-    position: relative;
+  max-width: 700px;
+
+  section{
+    margin: 0 auto;
+    padding: 100px 0;
   }
 
-  &::after{
-    background: $color_02;
-    margin-left: 20px;
-    height: 2px;
-    width: 400px;
-    top:0;
-    position: relative;
-    display: block;
-    content: '';
+  &__heading{
+    &__h2{
+      display: flex;
+      white-space: nowrap;
+      width: 100%;
+      margin: 10px 0 40px;
+      position: relative;
+      align-items: center;
+
+      -moz-box-align: center;
+
+      &::before{
+        content: '0' counter(section) '.';
+        counter-increment: section 1;
+        color: $color_02;
+        position: relative;
+      }
+
+      &::after{
+        background: $color_02;
+        margin-left: 20px;
+        height: 2px;
+        width: 400px;
+        top:0;
+        position: relative;
+        display: block;
+        content: '';
+      }
+    }
   }
+
+  &__container{
+    display: flex;
+
+    &__tablist{
+      position: relative;
+      z-index: 3;
+      width: max-content;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+        &__button{
+          text-decoration: none;
+          text-decoration-skip-ink: auto;
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: $tab_height;
+          padding: 0 20px 20px;
+          border: none;
+          border-left: 2px solid $color_12;
+          border-radius: 0;
+          background-color: transparent;
+          color: $color_12;
+          text-align: left;
+          white-space: nowrap;
+          cursor: pointer;
+
+          -moz-box-align: center;
+
+          &:hover, &:focus, &:active {
+            background-color: $color_09;
+            outline: 0;
+          }
+        }
+
+    }
+
+    &__tabpanels{
+      position: relative;
+      width: 100%;
+      margin-left: 20px;
+
+      &__tabpanel{
+        width: 100%;
+        height: auto;
+        padding: 10px 5px;
+      }
+    }
+  }
+
+
 }

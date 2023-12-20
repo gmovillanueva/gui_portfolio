@@ -3,13 +3,17 @@
 .header{
   display: flex;
   justify-content: space-between;
-  height: $nav_height;
   align-items: center;
+  position: fixed;
   top: 0;
+  z-index: 11;
   padding: 0 5px;
   width: 100%;
-  position: fixed;
-  z-index: 99;
+  height: $nav_height;
+
+
+  -moz-box-pack: justify;
+  -moz-box-align: center;
 }
 
 .nav{
@@ -18,19 +22,27 @@
   align-items: center;
   position: relative;
   width: 100%;
-  z-index: 100;
+  z-index: 12;
   counter-reset: item 0;
+
+  -moz-box-pack: justify;
+  -moz-box-align: center;
 }
 
 .logo{
   display: flex;
   justify-content: center;
   align-items: center;
+
+  -moz-box-pack: center;
+  -moz-box-align: center;
 }
 
 .container{
   display: flex;
   align-items: center;
+
+  -moz-box-align: center;
 }
 
 .list{

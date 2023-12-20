@@ -1,28 +1,53 @@
 @import '../_variables.scss';
 
-.section{
-  height: auto;
-  padding-top: $nav_height;
+.hero{
+  $self: &;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
+  height: 100vh;
+  padding: 0;
+
+  &__headings{
+    &__h1{
+      margin: 0 0 30px 40px;
+      color: $color_04;
+      font-size: clamp($fontsize_sm,5vw,$fontsize_md);
+    }
+
+    &__h2{
+      margin: 0;
+      font-weight: 600;
+      font-size: clamp(40px,8vw,80px);
+    }
+
+    &__h3{
+      margin: 0;
+      font-weight: 600;
+      font-size: clamp(40px,8vw,80px);
+    }
+  }
+
+  &__headingIntro{
+    margin: 0 0 30px 40px;
+  }
+
+  &__headingName{
+    margin:0;
+  }
+
+  &__headingTitle{
+    margin-top: 5px;
+  }
+
+  &__text{
+    &__paragraph{
+      margin: 20px 0 0;
+      max-width: 540px;
+    }
+  }
 }
 
-.headingIntro{
-  margin: 0 0 30px 40px;
-}
 
-.headingName{
-  margin:0;
-}
-
-.headingTitle{
-  margin-top: 5px;
-}
-
-.text{
-  margin: 20px 0 0;
-  max-width: 540px;
-}

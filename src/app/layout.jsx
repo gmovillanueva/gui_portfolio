@@ -1,4 +1,3 @@
-import Header from '@/components/Header';
 import * as LayoutStyle from '@/styles/_layout.module.scss';
 import clsx from 'clsx';
 import { JetBrains_Mono } from 'next/font/google';
@@ -15,12 +14,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
-      <body className={clsx(jBrain.className, LayoutStyle.layout)}>
-        <div className={LayoutStyle.ring}>
-          <Header />
-          {children}
-        </div>
+    <html
+      lang='en'
+      className={LayoutStyle.layout}
+    >
+      <body className={clsx(jBrain.className, LayoutStyle.layout__body)}>
+        <div className={LayoutStyle.layout__ring}>{children}</div>
       </body>
     </html>
   );

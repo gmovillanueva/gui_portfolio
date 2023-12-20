@@ -5,7 +5,7 @@ import logoRight from '@public/svg/logoWingRight.svg';
 import Image from 'next/image';
 export default function Header() {
   return (
-    <header className={HeaderStyle}>
+    <header className={HeaderStyle.header}>
       <nav
         id='header-nav'
         className={HeaderStyle.nav}
