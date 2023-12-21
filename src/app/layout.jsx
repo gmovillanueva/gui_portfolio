@@ -1,5 +1,5 @@
-import * as LayoutStyle from '@/styles/_layout.module.scss';
-import clsx from 'clsx';
+import * as LayoutStyle from '@/app/layout.module.scss';
+import '@/styles/_global.scss';
 import { JetBrains_Mono } from 'next/font/google';
 
 const jBrain = JetBrains_Mono({
@@ -14,12 +14,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang='en'
-      className={LayoutStyle.layout}
-    >
-      <body className={clsx(jBrain.className, LayoutStyle.layout__body)}>
-        <div className={LayoutStyle.layout__ring}>{children}</div>
+    <html lang='en'>
+      <body className={jBrain.className}>
+        <div className={LayoutStyle.ring}>{children}</div>
       </body>
     </html>
   );

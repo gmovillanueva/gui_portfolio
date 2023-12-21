@@ -1,4 +1,4 @@
-import * as AboutStyle from '@/styles/components/_about.module.scss';
+import * as AboutStyle from '@/components/About/about.module.scss';
 import heroImage from '@public/images/heroimage.webp';
 import Image from 'next/image';
 
@@ -6,27 +6,27 @@ export default function About() {
   return (
     <section
       id='about'
-      className={AboutStyle.about}
+      className={AboutStyle.base}
     >
       <div id='headings'>
-        <h3 className={AboutStyle.about__headings__header3}>About</h3>
+        <h3 className={AboutStyle.base__headings}>About</h3>
         <h4>I am Guillermo</h4>
       </div>
       <div
         id='container'
-        className={AboutStyle.about__container}
+        className={AboutStyle.container}
       >
-        <div id='container-text'>
+        <div id='subcontainer'>
           <div id='paragraphs'>
-            <p className={AboutStyle.about__text}>
+            <p className={AboutStyle.container_text}>
               Hello, fellow coffee drinker! Thank you for showing such keen
               interest in me. I am guessing you want to know more about me?
               Hmmm... Where to begin...
             </p>
-            <p className={AboutStyle.about__text}>
+            <p className={AboutStyle.container_text}>
               In a galaxy very far far away...
             </p>
-            <p className={AboutStyle.about__text}>
+            <p className={AboutStyle.container_text}>
               Alright, all jokes aside. As you probably know by now, I am
               William Newton, a full-stack developer born and raised in Texas,
               United States. No, we do not ride horses everywhere that is only
@@ -45,8 +45,8 @@ export default function About() {
             </p>
           </div>
           <div
-            id='current-skills'
-            className={AboutStyle.about__skills}
+            id='skills'
+            className={AboutStyle.container_skills}
           >
             <li>React</li>
             <li>JavaScript</li>
@@ -54,9 +54,9 @@ export default function About() {
             <li>Node.js</li>
           </div>
         </div>
-        <div id='container-image'>
+        <div id='image'>
           <Image
-            className={AboutStyle.about__image}
+            className={AboutStyle.container_image}
             src={heroImage}
             width={400}
             heihgt={400}

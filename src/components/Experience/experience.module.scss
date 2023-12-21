@@ -1,0 +1,120 @@
+@import '../../styles/variables';
+@import "../../styles/mixins";
+
+.base{
+  max-width: 700px;
+
+  section{
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+
+  &_heading{
+      @include heading-base
+  }
+}
+
+.container{
+  display: flex;
+
+  &__tablist{
+    position: relative;
+    z-index: 3;
+    width: max-content;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+.button{
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: $tab_height;
+  padding: 0 20px 20px;
+  border: none;
+  border-left: 2px solid $color_12;
+  border-radius: 0;
+  background-color: transparent;
+  color: $color_12;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+
+  -moz-box-align: center;
+
+  &__hover{
+    &:hover{
+      background-color: $color_09;
+      outline: 0;
+    }
+  }
+
+  &__focus{
+    &:focus{
+      background-color: $color_09;
+      outline: 0;
+    }
+  }
+
+  &__active{
+    &:active{
+      background-color: $color_09;
+      outline: 0;
+    }
+  }
+}
+
+.tabpanels{
+  position: relative;
+  width: 100%;
+  margin-left: 20px;
+
+  &_panel{
+    width: 100%;
+    height: auto;
+    padding: 10px 5px;
+  }
+}
+
+.infolist{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: $fontsize_lg;
+
+  &_infoitem{
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+
+    &__before{
+      &:before{
+        content: '»' ;
+        position: absolute;
+        left: 0;
+        color: $color_04;
+      }
+    }
+  }
+}
+
+.jobsection{
+  max-width: calculateREM(700px);
+
+  &_innersection{
+    display: flex;
+
+    @include screen('sm', max){
+      display: block;
+    }
+
+    @include screen('md', min){
+      min-height: calculateREM(340px);
+    }
+  }
+}

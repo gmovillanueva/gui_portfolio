@@ -1,0 +1,19 @@
+@import "../functions";
+
+$fontsize_2xsmall: 12px;
+$fontsize_xsmall: 13px;
+$fontsize_small: 14px;
+$fontsize_medium: 16px;
+$fontsize_large: 18px;
+$fontsize_xlarge: 20px;
+$fontsize_2xlarge: 22px;
+$fontsize_headings: 32px;
+
+$fontsize_xxs: calculateREM($fontsize_2xsmall);
+$fontsize_xs: calculateREM($fontsize_xsmall);
+$fontsize_sm: calculateREM($fontsize_small);
+$fontsize_md: calculateREM($fontsize_medium);
+$fontsize_lg: calculateREM($fontsize_large);
+$fontsize_xl: calculateREM($fontsize_xlarge);
+$fontsize_xxl: calculateREM($fontsize_2xlarge);
+$fontsize_h: calculateREM($fontsize_headings);;

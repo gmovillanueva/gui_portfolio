@@ -1,0 +1,11 @@
+// Storage for SCSS mixins
+//
+// ex.)
+// @mixin smMinBreakPoint {
+//     @media (min-width: #{$screen-sm}) {
+//         @content;
+//     }
+// }
+//
+@import "mixins/headings";
+@import "mixins/media";

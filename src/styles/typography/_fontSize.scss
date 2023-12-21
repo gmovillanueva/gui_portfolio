@@ -1,0 +1,6 @@
+// Contains remAdjuster
+@import '../functions.scss';
+
+@mixin font-size($size){
+  font-size: calculateREM($size);
+}

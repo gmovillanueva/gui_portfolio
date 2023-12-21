@@ -1,0 +1,43 @@
+// Contains all media query mixins
+
+$breakpoint_small: 640px;
+$breakpoint_medium: 768px;
+$breakpoint_large: 1024px;
+$breakpoint_xLarge: 1280px;
+$breakpoint_dxLarge: 1536px;
+
+@mixin screen($size, $type: max, $breakpoint: $breakpoint_small){
+  @if $size == 'sm' {
+    @media screen and ($type + -width: $breakpoint_small){
+      @content
+    }
+  }
+  @else  if $size == 'md' {
+    @media screen and ($type + -width: $breakpoint_medium){
+      @content
+    }
+  }
+  @else  if $size == 'lg' {
+    @media screen and ($type + -width: $breakpoint_large){
+      @content
+    }
+  }
+  @else  if $size == 'xl' {
+    @media screen and ($type + -width: $breakpoint_xLarge){
+      @content
+    }
+  }
+  @else  if $size == '2xl' {
+    @media screen and ($type + -width: $breakpoint_dxLarge){
+      @content
+    }
+  }
+  @else  if $size == 'custom' {
+    @media screen and ($type + -width: $breakpoint + px){
+      @content
+    }
+  }
+  @else {
+    @content;
+  }
+}

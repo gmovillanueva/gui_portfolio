@@ -1,4 +1,4 @@
-@import '../_variables.scss';
+@import '../../styles/variables';
 
 .hero{
   $self: &;
@@ -10,7 +10,7 @@
   height: 100vh;
   padding: 0;
 
-  &__headings{
+  &_headings{
     &__h1{
       margin: 0 0 30px 40px;
       color: $color_04;

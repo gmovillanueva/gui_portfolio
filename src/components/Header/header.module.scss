@@ -1,6 +1,6 @@
-@import '../_variables.scss';
+@import '../../styles/variables';
 
-.header{
+.base{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,22 +27,22 @@
 
   -moz-box-pack: justify;
   -moz-box-align: center;
+
+  &_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    -moz-box-pack: center;
+    -moz-box-align: center;
+  }
 }
 
-.logo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  -moz-box-pack: center;
-  -moz-box-align: center;
-}
 
 .container{
   display: flex;
   align-items: center;
-
-  -moz-box-align: center;
 }
 
 .list{
@@ -52,29 +52,36 @@
   padding: 0;
   margin: 0;
   list-style: none;
-}
+  -moz-box-align: center;
 
-.listitem{
-  margin: 0 5px;
-  position: relative;
-  counter-increment: item 1;
-}
+  &__listitem{
+    margin: 0 5px;
+    position: relative;
+    counter-increment: item 1;
+  }
 
-.listlink{
-  padding: 10px;
-  display: inline-block;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-  color: inherit;
-  position: relative;
+  &__listlink{
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
 
-  &::before{
-    content: '0' counter(item) '.';
-    margin-right: 5px;
-    text-align: right;
+    &::before{
+      content: '0' counter(item) '.';
+      margin-right: 5px;
+      text-align: right;
+
+
+    }
 
     &::selection{
 
     }
-  }
+}
+
+
+
+
 }
