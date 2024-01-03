@@ -1,6 +1,6 @@
 @import '../styles/variables';
 
-.ring{
+.borderRing{
   border-style: solid;
   border-color: $color-12;
   border-width: calculateREM(2px);

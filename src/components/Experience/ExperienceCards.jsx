@@ -3,9 +3,9 @@ import ExperienceStyle from '@/components/Experience/experience.module.scss';
 export default function ExperienceCards({ workEntry }) {
   const textArray = workEntry.bulletPoints.split('\n');
   return (
-    <article className={ExperienceStyle.carouselCard}>
-      <div className={ExperienceStyle.carouselCardBody}>
-        <h3 className={ExperienceStyle.carouselCardBodyHeading}>
+    <article className={ExperienceStyle.card}>
+      <div className={ExperienceStyle.card_body}>
+        <h3 className={ExperienceStyle.card_body_heading}>
           <span>{workEntry?.jobTitle}</span>
           <br />
           <span>&nbsp;@&nbsp;</span>

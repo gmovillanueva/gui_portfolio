@@ -3,21 +3,21 @@ import ExperienceCards from '@/components/Experience/ExperienceCards';
 import ExperienceStyle from '@/components/Experience/experience.module.scss';
 
 export default async function Experience() {
-  const experience = await readCache().then((workEntry) => {
+  const experience = await readCache('experience').then((workEntry) => {
     return workEntry;
   });
 
   return (
     <section
       id='experience'
-      className={ExperienceStyle.jobsection}
+      className={ExperienceStyle.jobSection}
     >
       <h2 className={ExperienceStyle.base_heading}>Where I have worked</h2>
       <div
         id='container'
-        className={ExperienceStyle.carouselContainer}
+        className={ExperienceStyle.carousel_container}
       >
-        <div className={ExperienceStyle.carouselTrack}>
+        <div className={ExperienceStyle.carousel_track}>
           {experience &&
             experience.map((workEntry, index) => {
               return (

@@ -14,12 +14,13 @@ import {customLog} from "../utils/customLogger/logger.mjs";
 
 dotenv.config({ path: `.env.local`, override: true })
 
-const cacheFilePath = path.join(
-  process.cwd(),
-  'src/api/cache/experienceSanitized.json',
-);
 
-const writeCache = async (fetcheData) => {
+
+const writeCache = async (contentType, fetcheData) => {
+  const cacheFilePath = path.join(
+    process.cwd(),
+    'src/api/cache/'+contentType+'Sanitized.json',
+  );
   new Promise((resolve) => {
     fs.outputFile(cacheFilePath,JSON.stringify(fetcheData,null, 2) , (error) => {
       if (error) console.error('writeCache: ', error);
@@ -28,7 +29,11 @@ const writeCache = async (fetcheData) => {
   })
 }
 
-export const readCache = async() =>{
+export const readCache = async(contentType) =>{
+  const cacheFilePath = path.join(
+    process.cwd(),
+    'src/api/cache/'+contentType+'Sanitized.json',
+  );
   try{
     return fs.readJson(cacheFilePath);
   } catch(error){
@@ -55,7 +60,7 @@ export const fetchContentfulAPI = async (contentType) => {
   const sanitizedData = sanitizeJSON(entries);
 
   try {
-    await writeCache(sanitizedData)
+    await writeCache(contentType, sanitizedData)
     customLog('_CYAN','Wrote ' + contentType + ' cache successfully.')
   } catch (error) {
     customLog('_RED','Error: ' + contentType)

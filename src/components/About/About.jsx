@@ -1,4 +1,4 @@
-import * as AboutStyle from '@/components/About/about.module.scss';
+import AboutStyle from '@/components/About/about.module.scss';
 import heroImage from '@public/images/heroimage.webp';
 import Image from 'next/image';
 
@@ -9,7 +9,7 @@ export default function About() {
       className={AboutStyle.base}
     >
       <div id='headings'>
-        <h3 className={AboutStyle.base__headings}>About</h3>
+        <h3 className={AboutStyle.base_headings}>About</h3>
         <h4>I am Guillermo</h4>
       </div>
       <div

@@ -14,7 +14,7 @@
   }
 }
 
-.jobsection{
+.jobSection{
   max-width: calculateREM(1200px);
 
   &_innersection{
@@ -30,41 +30,41 @@
   }
 }
 
-.carouselContainer{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100vh;
-  text-align: left;
-  justify-content: space-evenly;
-  margin-right: auto;
-  margin-left: auto;
-  align-items: center;
-  overflow: hidden;
-  max-width: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
+.carousel{
+  &_container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    text-align: left;
+    justify-content: space-evenly;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    overflow: hidden;
+    max-width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
 
-  @include screen('md', max){
-    flex-direction: row;
+    @include screen('md', max){
+      flex-direction: row;
+    }
+  }
+
+  &_track{
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    padding: 40px;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    scrollbar-width: thin;
+    scrollbar-color: $color_12 $background;
   }
 }
 
-.carouselTrack{
-  width: 100%;
-  display: flex;
-  overflow-x: scroll;
-  padding: 40px;
-  margin-right: 15px;
-  margin-left: 15px;
-
-  scrollbar-width: thin;
-  scrollbar-color: $color_12 $background;
-}
-
-
-
-.carouselCard{
+.card{
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -82,28 +82,28 @@
   background-color: $color_01;
   opacity: 0.4;
 
-  &:hover{
-    opacity: 1;
-  }
-
   @include screen('md', max){
     width: 600px;
   }
   @include screen('lg', max){
     width: 800px;
   }
-}
 
-.carouselCardBody{
-  padding-left: 0;
-  padding-right: 0;
-
-  @include screen('md', max){
-    padding-left: 30px;
-    padding-right: 30px;
+  &:hover{
+    opacity: 1;
   }
 
-  &Heading{
-    font-weight: 300;
+  &_body{
+    padding-left: 0;
+    padding-right: 0;
+
+    @include screen('md', max){
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &_heading{
+      font-weight: 300;
+    }
   }
 }

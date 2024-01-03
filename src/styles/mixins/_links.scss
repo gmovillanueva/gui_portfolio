@@ -1,0 +1,51 @@
+// Contains all link mixins
+@import "../variables";
+
+@mixin link{
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover,
+  &:focus-visible {
+    color: $color_08;
+    outline: 0;
+}
+}
+
+@mixin inline_link{
+  display: inline-block;
+  position: relative;
+  color: $color_08;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover,
+  &:focus-visible {
+    color: $color_08;
+    outline: 0;
+
+    &:after {
+      width: 100%;
+    }
+
+    & > * {
+      color: $color_08 !important;
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: $color_08;
+    opacity: 0.5;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}

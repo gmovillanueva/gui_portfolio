@@ -29,33 +29,33 @@ export default function Header() {
         </div>
         <div className={HeaderStyle.container}>
           <ol className={HeaderStyle.list}>
-            <li className={HeaderStyle.list__listitem}>
+            <li className={HeaderStyle.list_item}>
               <a
-                className={HeaderStyle.list__listlink}
+                className={HeaderStyle.list_link}
                 href='/#about'
               >
                 About
               </a>
             </li>
-            <li className={HeaderStyle.list__listitem}>
+            <li className={HeaderStyle.list_item}>
               <a
-                className={HeaderStyle.list__listlink}
+                className={HeaderStyle.list_link}
                 href='/#experience'
               >
                 Experience
               </a>
             </li>
-            <li className={HeaderStyle.list__listitem}>
+            <li className={HeaderStyle.list_item}>
               <a
-                className={HeaderStyle.list__listlink}
+                className={HeaderStyle.list_link}
                 href='/#projects'
               >
                 Projects & Work
               </a>
             </li>
-            <li className={HeaderStyle.list__listitem}>
+            <li className={HeaderStyle.list_item}>
               <a
-                className={HeaderStyle.list__listlink}
+                className={HeaderStyle.list_link}
                 href='/#contact'
               >
                 Contact

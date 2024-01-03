@@ -38,8 +38,6 @@
   }
 }
 
-
-
 .container{
   display: flex;
   align-items: center;
@@ -54,13 +52,13 @@
   list-style: none;
   -moz-box-align: center;
 
-  &__listitem{
+  &_item{
     margin: 0 5px;
     position: relative;
     counter-increment: item 1;
   }
 
-  &__listlink{
+  &_link{
     padding: 10px;
     display: inline-block;
     text-decoration: none;
@@ -72,16 +70,10 @@
       content: '0' counter(item) '.';
       margin-right: 5px;
       text-align: right;
-
-
     }
 
     &::selection{
 
     }
 }
-
-
-
-
 }

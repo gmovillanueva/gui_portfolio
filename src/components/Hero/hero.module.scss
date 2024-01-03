@@ -1,6 +1,6 @@
 @import '../../styles/variables';
 
-.hero{
+.base{
   $self: &;
   display: flex;
   justify-content: center;
@@ -10,44 +10,30 @@
   height: 100vh;
   padding: 0;
 
-  &_headings{
-    &__h1{
-      margin: 0 0 30px 40px;
-      color: $color_04;
-      font-size: clamp($fontsize_sm,5vw,$fontsize_md);
-    }
+}
 
-    &__h2{
-      margin: 0;
-      font-weight: 600;
-      font-size: clamp(40px,8vw,80px);
-    }
-
-    &__h3{
-      margin: 0;
-      font-weight: 600;
-      font-size: clamp(40px,8vw,80px);
-    }
-  }
-
-  &__headingIntro{
+.headings{
+  &_h1{
     margin: 0 0 30px 40px;
+    color: $color_04;
+    font-size: clamp($fontsize_sm,5vw,$fontsize_md);
   }
 
-  &__headingName{
-    margin:0;
+  &_h2{
+    margin: 0;
+    font-weight: 600;
+    font-size: clamp(40px,8vw,80px);
   }
 
-  &__headingTitle{
-    margin-top: 5px;
-  }
-
-  &__text{
-    &__paragraph{
-      margin: 20px 0 0;
-      max-width: 540px;
-    }
+  &_h3{
+    margin: 0;
+    font-weight: 600;
+    font-size: clamp(40px,8vw,80px);
   }
 }
 
 
+.text{
+  margin: 20px 0 0;
+  max-width: 540px;
+}
