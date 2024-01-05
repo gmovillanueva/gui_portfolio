@@ -26,22 +26,6 @@ export default async function Experience() {
             );
           })}
       </div>
-      {/*<div
-        id='container'
-        className={ExperienceStyle.carousel_container}
-      >
-        <div className={ExperienceStyle.carousel_track}>
-          {experience &&
-            experience.map((workEntry, index) => {
-              return (
-                <ExperienceCards
-                  key={index}
-                  workEntry={workEntry}
-                />
-              );
-            })}
-        </div>
-      </div>*/}
     </section>
   );
 }
