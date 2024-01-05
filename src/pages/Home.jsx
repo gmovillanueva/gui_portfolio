@@ -10,10 +10,10 @@ import HomeStyle from '@/pages/_home.module.scss';
 
 export default function Home() {
   return (
-    <div className={HomeStyle.layout}>
+    <div id='home'>
       <Header />
       <div id='content'>
-        <main className={HomeStyle.main}>
+        <main className={HomeStyle.fill_height}>
           <Hero />
           <About />
           <Experience />

@@ -1,4 +1,4 @@
-import * as LayoutStyle from '@/app/layout.module.scss';
+import LayoutStyle from '@/app/layout.module.scss';
 import '@/styles/_global.scss';
 import { JetBrains_Mono } from 'next/font/google';
 

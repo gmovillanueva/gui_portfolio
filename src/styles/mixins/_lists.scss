@@ -1,7 +1,28 @@
 // Contains all list mixins
+@import "../variables";
 
 @mixin reset_list{
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+@mixin pretty_list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: $fontsize_lg;
+
+  li{
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+
+    &:before{
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: $color_08;
+    }
+  }
 }

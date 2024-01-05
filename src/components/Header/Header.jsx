@@ -1,66 +1,47 @@
-import * as HeaderStyle from '@/components/Header/header.module.scss';
-import logoCenter from '@public/svg/logoWingCenter.svg';
-import logoLeft from '@public/svg/logoWingLeft.svg';
-import logoRight from '@public/svg/logoWingRight.svg';
-import Image from 'next/image';
+import HeaderStyle from '@/components/Header/header.module.scss';
+import LogoSVG from '@/components/_icons/LogoSVG';
+import { navLinks } from '@/utils/configs/baseConfig';
+import Link from 'next/link';
 export default function Header() {
+  const userLogo = (
+    <div
+      className={HeaderStyle.logo}
+      tabIndex='-1'
+    >
+      <a
+        href='/'
+        aria-label='home'
+      >
+        <div className={HeaderStyle.logo_container}>
+          <LogoSVG />
+        </div>
+      </a>
+    </div>
+  );
   return (
     <header className={HeaderStyle.base}>
       <nav
         id='header-nav'
         className={HeaderStyle.nav}
       >
-        <div
-          id='header-nav-logo'
-          className={HeaderStyle.nav_logo}
-        >
-          <Image
-            src={logoLeft}
-            alt='logoWingLeft'
-          />
-          <Image
-            src={logoCenter}
-            alt='logoWingCenter'
-          />
-          <Image
-            src={logoRight}
-            alt='logoWingRight'
-          />
-        </div>
-        <div className={HeaderStyle.container}>
+        <>{userLogo}</>
+
+        <div className={HeaderStyle.list_container}>
           <ol className={HeaderStyle.list}>
-            <li className={HeaderStyle.list_item}>
-              <a
-                className={HeaderStyle.list_link}
-                href='/#about'
-              >
-                About
-              </a>
-            </li>
-            <li className={HeaderStyle.list_item}>
-              <a
-                className={HeaderStyle.list_link}
-                href='/#experience'
-              >
-                Experience
-              </a>
-            </li>
-            <li className={HeaderStyle.list_item}>
-              <a
-                className={HeaderStyle.list_link}
-                href='/#projects'
-              >
-                Projects & Work
-              </a>
-            </li>
-            <li className={HeaderStyle.list_item}>
-              <a
-                className={HeaderStyle.list_link}
-                href='/#contact'
-              >
-                Contact
-              </a>
-            </li>
+            {navLinks &&
+              navLinks.map(({ url, name }, index) => (
+                <li
+                  key={index}
+                  className={HeaderStyle.item}
+                >
+                  <Link
+                    href={url}
+                    className={HeaderStyle.link}
+                  >
+                    {name}
+                  </Link>
+                </li>
+              ))}
           </ol>
         </div>
         <div id='header-nav-button'></div>

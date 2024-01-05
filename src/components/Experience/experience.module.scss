@@ -1,109 +1,68 @@
 @import '../../styles/variables';
 @import "../../styles/mixins";
 
-.base{
-  max-width: 700px;
-
-  section{
-    margin: 0 auto;
-    padding: 100px 0;
-  }
-
-  &_heading{
-      @include heading-base
-  }
+.heading{
+  @include heading_base;
 }
 
-.jobSection{
-  max-width: calculateREM(1200px);
-
-  &_innersection{
-    display: flex;
-
-    @include screen('sm', max){
-      display: block;
-    }
-
-    @include screen('md', min){
-      min-height: calculateREM(340px);
-    }
-  }
-}
-
-.carousel{
-  &_container{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 100vh;
-    text-align: left;
-    justify-content: space-evenly;
-    margin-right: auto;
-    margin-left: auto;
-    align-items: center;
-    overflow: hidden;
-    max-width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-
-    @include screen('md', max){
-      flex-direction: row;
-    }
-  }
-
-  &_track{
-    width: 100%;
-    display: flex;
-    overflow-x: scroll;
-    padding: 40px;
-    margin-right: 15px;
-    margin-left: 15px;
-
-    scrollbar-width: thin;
-    scrollbar-color: $color_12 $background;
-  }
+.grid{
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  column-gap: 3rem;
+  row-gap: 2.5rem;
 }
 
 .card{
   display: flex;
+  align-items: flex-start;
+  column-gap: 1rem;
+  max-width: 42rem;
+  position: relative;
+
+
+
+//  &:before{
+//    position: absolute;
+//    bottom: 0;
+//    top: 5rem;
+//    left: 2.25rem;
+//    height: calc(100% - 70px);
+//    width: 5px;
+//    background-color: $color_08;
+//  }
+}
+
+.card_link{
+  display: grid;
+  place-items: center;
+  border: 2px solid $color_08;
+  min-height: 80px;
+  min-width: 80px;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  overflow: clip;
+  position: relative;
+}
+
+.card_body{
+  display: flex;
   flex-direction: column;
-  flex-shrink: 0;
-  border-radius: 8px;
-  align-items: center;
+  align-items: flex-start;
+}
 
-  margin: 14px;
+.card_inline{
+  @include inline_link;
+}
 
-  height: 600px;
-  width: 500px;
-  padding: 40px;
-  cursor: pointer;
-  overflow: hidden;
+.card_date{
+  margin-top: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 
-  background-color: $color_01;
-  opacity: 0.4;
+.card_text{
+  margin-top: 0.5rem;
+  letter-spacing: 0.1em;
 
-  @include screen('md', max){
-    width: 600px;
-  }
-  @include screen('lg', max){
-    width: 800px;
-  }
-
-  &:hover{
-    opacity: 1;
-  }
-
-  &_body{
-    padding-left: 0;
-    padding-right: 0;
-
-    @include screen('md', max){
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-
-    &_heading{
-      font-weight: 300;
-    }
-  }
+  @include pretty_list;
 }

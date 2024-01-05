@@ -1,0 +1,16 @@
+// Contains all sections mixins
+
+@import "media";
+
+@mixin section_base {
+  margin: 0 auto;
+  padding: 100px 0;
+  max-width: 1000px;
+
+  @include screen('md', max){
+    padding: 80px 0;
+  }
+  @include screen('sm', max){
+    padding: 60px 0;
+  }
+}

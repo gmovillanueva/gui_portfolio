@@ -1,34 +1,55 @@
+// Contains all headings mixins
+
 @import "../variables";
 
-@mixin heading-base{
+@mixin heading_base {
   display: flex;
-  white-space: nowrap;
-  width: 100%;
-  margin: 10px 0 40px;
-  position: relative;
   align-items: center;
-  -moz-box-align: center;
+  position: relative;
+  margin: 10px 0 40px;
+  width: 100%;
+  font-size: clamp(26px, 5vw, $fontsize_h);
+  white-space: nowrap;
 
-  @include heading_before_after
+  @include heading_base_before_after
 
 }
 
-@mixin heading_before_after{
-  &::before{
-    content: '0' counter(section) '.';
-    counter-increment: section 1;
-    color: $color_02;
+@mixin heading_base_before_after{
+  &:before{
     position: relative;
+    bottom: 4px;
+    counter-increment: section;
+    content: '0' counter(section) '.';
+    margin-right: 10px;
+    color: $color_10;
+    font-size: clamp($fontsize_md, 3vw, $fontsize_xl);
+    font-weight: 400;
+
+    @include screen('sm', max){
+      margin-bottom: -3px;
+      margin-right: 5px;
+    }
   }
 
-  &::after{
-    background: $color_02;
-    margin-left: 20px;
-    height: 2px;
-    width: 400px;
-    top:0;
-    position: relative;
-    display: block;
+  &:after{
     content: '';
+    display: block;
+    position: relative;
+    top: -5px;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: $color_09;
+
+    @include screen('lg', max){
+      width: 200px;
+    }
+    @include screen('md', max){
+      width: 100%;
+    }
+    @include screen('custom', max, 600){
+      margin-left: 10px;
+    }
   }
 }

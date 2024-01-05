@@ -9,7 +9,7 @@ import contentful from "contentful";
 import fs from "fs-extra";
 import path from 'path';
 import dotenv from 'dotenv';
-import {sanitizeJSON} from "../utils/sanitizeJSON.mjs";
+import {sanitizeJSON} from "./sanitizeJSON.mjs";
 import {customLog} from "../utils/customLogger/logger.mjs";
 
 dotenv.config({ path: `.env.local`, override: true })

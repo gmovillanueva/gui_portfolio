@@ -1,24 +1,48 @@
 @import '../../styles/variables';
 @import "../../styles/mixins";
 
-.base{
-  $self: &;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 100vh;
+.section{
+  max-width: 1000px;
+}
+
+.heading{
+  @include heading_base;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 50px;
+
+  @include screen('md', max){
+    display: block;
+  }
+}
+
+.skills_list{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  grid-gap: 0 10px;
   padding: 0;
+  margin: 20px 0 0 0;
+  overflow: hidden;
+  list-style: none;
 
-  section{
-    margin: 0 auto;
-    padding: 100px 0;
+  &_item{
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: $fontsize_xs;
+
+    &before{
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: $color_08;
+      font-size: $fontsize_sm;
+      line-height: 12px;
+    }
   }
-
-  &_headings{
-    @include heading-base;
-  }
-
 }
 
 

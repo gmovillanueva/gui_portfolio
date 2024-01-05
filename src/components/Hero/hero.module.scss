@@ -1,37 +1,46 @@
 @import '../../styles/variables';
+@import "../../styles/mixins";
 
-.base{
-  $self: &;
-  display: flex;
-  justify-content: center;
+.section{
+  @include flex_center;
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
   height: 100vh;
   padding: 0;
 
+  @include screen('md', max){
+    height: auto;
+    padding-top: $nav_height;
+  }
+  @include screen('md', min){
+    height: auto;
+    padding-top: $nav_height;
+  }
+  @include screen('xs', max){
+    height: auto;
+    padding-top: $nav_height;
+  }
 }
 
-.headings{
+.heading{
   &_h1{
     margin: 0 0 30px 40px;
     color: $color_04;
     font-size: clamp($fontsize_sm,5vw,$fontsize_md);
-  }
+    font-weight: 400;
 
-  &_h2{
-    margin: 0;
-    font-weight: 600;
-    font-size: clamp(40px,8vw,80px);
+    @include screen('md', max){
+      margin: 0 0 20px 2px;
+    }
   }
 
   &_h3{
-    margin: 0;
-    font-weight: 600;
-    font-size: clamp(40px,8vw,80px);
+    margin-top: 5px;
+    color: $color_04;
+    line-height: 0.9;
   }
 }
-
 
 .text{
   margin: 20px 0 0;

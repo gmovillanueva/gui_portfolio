@@ -3,20 +3,23 @@ import heroImage from '@public/images/heroimage.webp';
 import Image from 'next/image';
 
 export default function About() {
+  const currentSkills = [
+    'JavaScript',
+    'TypeScript',
+    'Next',
+    'React',
+    'Node.js',
+    'C#',
+  ];
   return (
     <section
       id='about'
-      className={AboutStyle.base}
+      className={AboutStyle.section}
     >
-      <div id='headings'>
-        <h3 className={AboutStyle.base_headings}>About</h3>
-        <h4>I am Guillermo</h4>
-      </div>
-      <div
-        id='container'
-        className={AboutStyle.container}
-      >
-        <div id='subcontainer'>
+      <h2 className={AboutStyle.heading}>About Me</h2>
+
+      <div className={AboutStyle.grid}>
+        <div id='text_content'>
           <div id='paragraphs'>
             <p className={AboutStyle.container_text}>
               Hello, fellow coffee drinker! Thank you for showing such keen
@@ -44,16 +47,20 @@ export default function About() {
               building accessible products and digital experiences.
             </p>
           </div>
-          <div
-            id='skills'
-            className={AboutStyle.container_skills}
-          >
-            <li>React</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>Node.js</li>
-          </div>
+
+          <ul className={AboutStyle.skills_list}>
+            {currentSkills &&
+              currentSkills.map((skill, index) => (
+                <li
+                  className={AboutStyle.skills_list_item}
+                  key={index}
+                >
+                  {skill}
+                </li>
+              ))}
+          </ul>
         </div>
+
         <div id='image'>
           <Image
             className={AboutStyle.container_image}
