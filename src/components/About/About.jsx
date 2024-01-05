@@ -48,7 +48,7 @@ export default function About() {
             </p>
           </div>
 
-          <ul className={AboutStyle.skills_list}>
+          <ul className={AboutStyle.skillsList}>
             {currentSkills &&
               currentSkills.map((skill, index) => (
                 <li

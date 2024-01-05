@@ -6,22 +6,22 @@ export default function ProjectCard({ projectEntry }) {
   return (
     <li className={ProjectsStyle.grid}>
       <div
-        className={ProjectsStyle.project_content}
+        className={ProjectsStyle.projectContent}
         id='project_content'
       >
         <div>
-          <p className={ProjectsStyle.project_overtitle}>Featured Project</p>
+          <p className={ProjectsStyle.projectOverTitle}>Featured Project</p>
 
-          <h3 className={ProjectsStyle.project_title}>
+          <h3 className={ProjectsStyle.projectTitle}>
             {projectEntry.projectTitle}
           </h3>
 
-          <div className={ProjectsStyle.project_description}>
+          <div className={ProjectsStyle.projectDescription}>
             {projectEntry.description}
           </div>
 
           {projectEntry.technology?.length && (
-            <ul className={ProjectsStyle.project_tech}>
+            <ul className={ProjectsStyle.projectTech}>
               {projectEntry.technology.map((technology, index) => (
                 <li key={index}>{technology}</li>
               ))}
@@ -55,10 +55,10 @@ export default function ProjectCard({ projectEntry }) {
         </div>
       </div>*/}
 
-      <div className={ProjectsStyle.project_image_wrapper}>
-        <div className={ProjectsStyle.project_image_dummy}>
+      <div className={ProjectsStyle.projectImageWrapper}>
+        <div className={ProjectsStyle.projectImageDummy}>
           <ContentfulImage
-            className={ProjectsStyle.project_image}
+            className={ProjectsStyle.projectImage}
             alt='Photo'
             width={700}
             height={360}

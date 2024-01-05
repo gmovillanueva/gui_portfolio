@@ -1,53 +1,67 @@
 // Contains all headings mixins
 
 @import "../variables";
+@import "media";
 
-@mixin heading_base {
+@mixin headingBase {
+  position: relative;
+
   display: flex;
   align-items: center;
-  position: relative;
-  margin: 10px 0 40px;
+
   width: 100%;
-  font-size: clamp(26px, 5vw, $fontsize_h);
+  margin: 10px 0 40px;
+
+  font-size: clamp(26px, 5vw, $fontsizeH);
   white-space: nowrap;
 
-  @include heading_base_before_after
+  @include headingBaseBeforeAfter
 
 }
 
-@mixin heading_base_before_after{
-  &:before{
+@mixin headingBaseBeforeAfter {
+
+  &::before{
+    content: '0' counter(section) '.';
+    counter-increment: section;
+
     position: relative;
     bottom: 4px;
-    counter-increment: section;
-    content: '0' counter(section) '.';
+
     margin-right: 10px;
-    color: $color_10;
-    font-size: clamp($fontsize_md, 3vw, $fontsize_xl);
+
+    font-size: clamp($fontsizeMD, 3vw, $fontsizeXL);
     font-weight: 400;
+    color: $color10;
 
     @include screen('sm', max){
-      margin-bottom: -3px;
       margin-right: 5px;
+      margin-bottom: -3px;
     }
   }
 
-  &:after{
+  &::after{
     content: '';
-    display: block;
+
     position: relative;
     top: -5px;
+
+    display: block;
+
     width: 300px;
     height: 1px;
     margin-left: 20px;
-    background-color: $color_09;
+
+    background-color: $color09;
 
     @include screen('lg', max){
       width: 200px;
     }
+
     @include screen('md', max){
       width: 100%;
     }
+
     @include screen('custom', max, 600){
       margin-left: 10px;
     }

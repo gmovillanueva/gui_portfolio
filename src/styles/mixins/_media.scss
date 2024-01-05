@@ -1,43 +1,44 @@
 // Contains all media query mixins
 
-$breakpoint_small: 640px;
-$breakpoint_medium: 768px;
-$breakpoint_large: 1024px;
-$breakpoint_xLarge: 1280px;
-$breakpoint_dxLarge: 1536px;
+$breakpointSmall: 640px;
+$breakpointMedium: 768px;
+$breakpointLarge: 1024px;
+$breakpointXLarge: 1280px;
+$breakpointDXLarge: 1536px;
 
-@mixin screen($size, $type: max, $breakpoint: $breakpoint_small){
+@mixin screen($size, $type: max, $breakpoint: $breakpointSmall){
+
   @if $size == 'sm' {
-    @media screen and ($type + -width: $breakpoint_small){
+
+    @media screen and ($type + -width: $breakpointSmall){
       @content
     }
-  }
-  @else  if $size == 'md' {
-    @media screen and ($type + -width: $breakpoint_medium){
+  } @else if $size == 'md' {
+
+    @media screen and ($type + -width: $breakpointMedium){
       @content
     }
-  }
-  @else  if $size == 'lg' {
-    @media screen and ($type + -width: $breakpoint_large){
+  } @else if $size == 'lg' {
+
+    @media screen and ($type + -width: $breakpointLarge){
       @content
     }
-  }
-  @else  if $size == 'xl' {
-    @media screen and ($type + -width: $breakpoint_xLarge){
+  } @else if $size == 'xl' {
+
+    @media screen and ($type + -width: $breakpointXLarge){
       @content
     }
-  }
-  @else  if $size == '2xl' {
-    @media screen and ($type + -width: $breakpoint_dxLarge){
+  } @else if $size == '2xl' {
+
+    @media screen and ($type + -width: $breakpointDXLarge){
       @content
     }
-  }
-  @else  if $size == 'custom' {
+  } @else if $size == 'custom' {
+
     @media screen and ($type + -width: $breakpoint + px){
       @content
     }
-  }
-  @else {
+  } @else {
     @content;
   }
 }

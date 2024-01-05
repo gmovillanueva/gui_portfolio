@@ -2,22 +2,24 @@
 @import "../../styles/mixins";
 
 .heading{
-  @include heading_base;
+
+  @include headingBase;
 }
 
 .grid{
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  column-gap: 3rem;
-  row-gap: 2.5rem;
+  gap: 2.5rem 3rem;
 }
 
 .card{
-  display: flex;
-  align-items: flex-start;
-  column-gap: 1rem;
-  max-width: 42rem;
   position: relative;
+
+  display: flex;
+  column-gap: 1rem;
+  align-items: flex-start;
+
+  max-width: 42rem;
 
 
 
@@ -32,37 +34,41 @@
 //  }
 }
 
-.card_link{
+.cardLink{
+  position: relative;
+
+  overflow: clip;
   display: grid;
   place-items: center;
-  border: 2px solid $color_08;
-  min-height: 80px;
+
   min-width: 80px;
+  min-height: 80px;
   padding: 0.5rem;
+
+  border: 2px solid $color08;
   border-radius: 0.375rem;
-  overflow: clip;
-  position: relative;
 }
 
-.card_body{
+.cardBody{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.card_inline{
-  @include inline_link;
+.cardInline{
+
+  @include inlineLink;
 }
 
-.card_date{
+.cardDate{
   margin-top: 0.5rem;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
-.card_text{
+.cardText{
   margin-top: 0.5rem;
   letter-spacing: 0.1em;
 
-  @include pretty_list;
+  @include prettyList;
 }

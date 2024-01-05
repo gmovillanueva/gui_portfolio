@@ -2,16 +2,21 @@
 @import '../../styles/mixins';
 
 .base{
-  @include flex_between;
-  position: fixed;
-  top: 0;
-  z-index: 11;
-  padding: 0 50px;
-  width: 100%;
-  height: $nav_height;
-  filter: none !important;
+
+  @include flexBetween;
+
   pointer-events: auto !important;
   user-select: auto !important;
+
+  position: fixed;
+  z-index: 11;
+  top: 0;
+
+  width: 100%;
+  height: $navHeight;
+  padding: 0 50px;
+
+  filter: none !important;
 
   @include screen('lg', max){
     padding: 0 40px;
@@ -23,34 +28,42 @@
 }
 
 .nav{
-  @include flex_between;
-  position: relative;
-  width: 100%;
-  z-index: 12;
+
+  @include flexBetween;
+
   counter-reset: item 0;
-  color: $color_16;
+
+  position: relative;
+  z-index: 12;
+
+  width: 100%;
+
+  color: $color16;
 }
 
 .logo{
-  @include flex_center;
+
+  @include flexCenter;
+
   a{
-    width: 48px;
-    height: 48px;
     position: relative;
     z-index: 1;
+    width: 48px;
+    height: 48px;
   }
+
   &:hover,
   &:focus{
     outline: 0;
   }
 }
 
-.logo_container{
+.logoContainer{
   position: relative;
   z-index: 1;
 }
 
-.list_container{
+.listContainer{
   display: flex;
   align-items: center;
 
@@ -60,26 +73,28 @@
 }
 
 .list{
-  @include flex_between;
-  padding: 0;
+
+  @include flexBetween;
+
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .item{
-  margin: 0 5px;
-  position: relative;
   counter-increment: item 1;
+  position: relative;
+  margin: 0 5px;
 }
 
 .link{
   padding: 10px;
 
-  &:before{
+  &::before{
     content: '0' counter(item) '.';
     margin-right: 5px;
-    text-align: right;
-    color: $color_06
+    color: $color06;
+    text-align: right
   }
 
 }

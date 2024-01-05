@@ -1,5 +1,4 @@
 // Storage for SCSS functions
-//
 // ex.)
 // @function makelongshadow($color) {
 //   $val: 0px 0px $color;
@@ -8,6 +7,5 @@
 //   }
 //   @return $val;
 // }
-//
 
-@import './functions/calculateREM.scss';
+@import 'functions/calculaterem';

@@ -15,13 +15,13 @@ export default function ExperienceCards({ workEntry }) {
         href={workEntry.companyUrl}
         rel='noreferrer noopener'
         target='_blank'
-        className={ExperienceStyle.card_link}
-        id={ExperienceStyle.card_link}
+        className={ExperienceStyle.cardLink}
+        id={ExperienceStyle.cardLink}
       >
         <LogoSVG />
       </a>
       <div
-        className={ExperienceStyle.card_body}
+        className={ExperienceStyle.cardBody}
         id='card_body'
       >
         <h3>
@@ -31,18 +31,18 @@ export default function ExperienceCards({ workEntry }) {
             href={workEntry.companyUrl}
             rel='noreferrer noopener'
             target='_blank'
-            className={ExperienceStyle.card_inline}
+            className={ExperienceStyle.cardInline}
           >
             &nbsp;@{workEntry.companyName}
           </a>
         </h3>
-        <p className={ExperienceStyle.card_date}>
+        <p className={ExperienceStyle.cardDate}>
           {new Date(workEntry.startDate).getFullYear()} -{' '}
           {workEntry?.currentlyHere
             ? 'Present'
             : new Date(workEntry.endDate).getFullYear()}{' '}
         </p>
-        <ul className={ExperienceStyle.card_text}>
+        <ul className={ExperienceStyle.cardText}>
           {textArray.map((bullet, index) => {
             return <li key={index}>{bullet}</li>;
           })}
@@ -58,7 +58,7 @@ ExperienceCards.propTypes = {
     bulletPoints: PropTypes.string,
     startDate: PropTypes.string,
     endDate: PropTypes.string,
-    currentlyHere: PropTypes.string,
+    currentlyHere: PropTypes.bool,
     jobTitle: PropTypes.string,
     companyName: PropTypes.string,
   }),

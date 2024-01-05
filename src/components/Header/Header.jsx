@@ -12,7 +12,7 @@ export default function Header() {
         href='/'
         aria-label='home'
       >
-        <div className={HeaderStyle.logo_container}>
+        <div className={HeaderStyle.logoContainer}>
           <LogoSVG />
         </div>
       </a>
@@ -26,7 +26,7 @@ export default function Header() {
       >
         <>{userLogo}</>
 
-        <div className={HeaderStyle.list_container}>
+        <div className={HeaderStyle.listContainer}>
           <ol className={HeaderStyle.list}>
             {navLinks &&
               navLinks.map(({ url, name }, index) => (

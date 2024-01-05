@@ -1,12 +1,13 @@
 // Contains all flex mixins
-@mixin flex_center {
+
+@mixin flexCenter {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-@mixin flex_between {
+@mixin flexBetween {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }

@@ -13,7 +13,7 @@ export default function Home() {
     <div id='home'>
       <Header />
       <div id='content'>
-        <main className={HomeStyle.fill_height}>
+        <main className={HomeStyle.fillHeight}>
           <Hero />
           <About />
           <Experience />

@@ -1,36 +1,42 @@
 // Contains all link mixins
+
 @import "../variables";
 
-@mixin inline_link{
-  display: inline-block;
+@mixin inlineLink{
   position: relative;
-  color: $color_08;
+  display: inline-block;
+  color: $color08;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &::after {
+    content: '';
+
+    position: relative;
+    bottom: 0.37em;
+
+    display: block;
+
+    width: 0;
+    height: 1px;
+
+    opacity: 0.5;
+    background-color: $color08;
+
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
 
   &:hover,
   &:focus-visible {
-    color: $color_08;
+    color: $color08;
     outline: 0;
 
-    &:after {
+    &::after {
       width: 100%;
     }
 
     & > * {
-      color: $color_08 !important;
+      color: $color08 !important;
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
-  }
-
-  &:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    position: relative;
-    bottom: 0.37em;
-    background-color: $color_08;
-    opacity: 0.5;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }

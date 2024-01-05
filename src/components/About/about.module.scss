@@ -6,41 +6,46 @@
 }
 
 .heading{
-  @include heading_base;
+
+  @include headingBase;
 }
 
 .grid{
   display: grid;
-  grid-template-columns: 3fr 2fr;
   grid-gap: 50px;
+  grid-template-columns: 3fr 2fr;
 
   @include screen('md', max){
     display: block;
   }
 }
 
-.skills_list{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 200px));
-  grid-gap: 0 10px;
-  padding: 0;
-  margin: 20px 0 0 0;
+.skillsList{
   overflow: hidden;
+  display: grid;
+  grid-gap: 0 10px;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+
+  margin: 20px 0 0;
+  padding: 0;
+
   list-style: none;
 
   &_item{
     position: relative;
     margin-bottom: 10px;
     padding-left: 20px;
-    font-size: $fontsize_xs;
+    font-size: $fontsizeXS;
 
     &before{
       content: '▹';
+
       position: absolute;
       left: 0;
-      color: $color_08;
-      font-size: $fontsize_sm;
+
+      font-size: $fontsizeSM;
       line-height: 12px;
+      color: $color08;
     }
   }
 }
@@ -56,12 +61,14 @@
   }
 
   &_skills{
+    overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
     gap: 0 10px;
-    padding: 0;
+
     margin: 20px 0 0;
-    overflow: hidden;
+    padding: 0;
+
     list-style: none;
   }
 

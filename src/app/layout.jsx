@@ -16,7 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={jBrain.className}>
-        <div className={LayoutStyle.borderRing}>{children}</div>
+        <div
+          id='layout'
+          className={LayoutStyle.borderRing}
+        >
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -2,33 +2,39 @@
 @import "../../styles/mixins";
 
 .section{
-  @include flex_center;
+
+  @include flexCenter;
+
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
+
   height: 100vh;
+  min-height: 100vh;
   padding: 0;
 
   @include screen('md', max){
     height: auto;
-    padding-top: $nav_height;
+    padding-top: $navHeight;
   }
+
   @include screen('md', min){
     height: auto;
-    padding-top: $nav_height;
+    padding-top: $navHeight;
   }
+
   @include screen('xs', max){
     height: auto;
-    padding-top: $nav_height;
+    padding-top: $navHeight;
   }
 }
 
 .heading{
+
   &_h1{
     margin: 0 0 30px 40px;
-    color: $color_04;
-    font-size: clamp($fontsize_sm,5vw,$fontsize_md);
+    font-size: clamp($fontsizeSM,5vw, $fontsizeMD);
     font-weight: 400;
+    color: $color04;
 
     @include screen('md', max){
       margin: 0 0 20px 2px;
@@ -37,12 +43,12 @@
 
   &_h3{
     margin-top: 5px;
-    color: $color_04;
     line-height: 0.9;
+    color: $color04;
   }
 }
 
 .text{
-  margin: 20px 0 0;
   max-width: 540px;
+  margin: 20px 0 0;
 }

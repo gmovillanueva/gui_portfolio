@@ -5,15 +5,17 @@
   counter-reset: section 0;
 }
 
-.fill_height{
+.fillHeight{
   padding: 0 150px;
 
   @include screen('lg', max){
     padding: 0 100px;
   }
+
   @include screen('md', max){
     padding: 0 50px;
   }
+
   @include screen('sm', max){
     padding: 0 25px;
   }
