@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- Intro Section-->
 
-## Getting Started
+# GUI Portfolio
 
-First, run the development server:
+GUI portfolio application built using React, Next, SASS, and Contentful. Meant to be a more visual version of my main portfolio found:
+[here](https://github.com/gmovillanueva/terminal_portfolio)
+
+<!-- Why Section-->
+
+## Okay... But why?
+
+I am a huge fan of Linux, and my main portfolio is based of a terminal which people may not like.
+
+<!-- Features Section-->
+
+## Features
+
+- [x] Wrote most of the README
+- [x] Actually functions
+- [] Looks snazzy
+
+<!-- Upcoming Features Section-->
+
+## Upcoming Features
+
+- Add themes
+- Add contact me
+- Allow switching between GUI and Prompt
+- Docker support
+
+<!-- Installation Section-->
+
+## Installation
+
+Really want to install my portfolio? Sure.
+
+1. Clone repo
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run project
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- Contributing Section-->
 
-You can start editing the page by modifying `app/page.jsx`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Feel like contributing?
+Go ahead!
+Feel free to do pull requests or log issues.
 
-## Learn More
+<!-- License Section-->
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[MIT License](https://choosealicense.com/licenses/mit/)
