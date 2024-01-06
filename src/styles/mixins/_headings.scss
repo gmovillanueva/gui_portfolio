@@ -3,6 +3,16 @@
 @import "../variables";
 @import "media";
 
+@mixin headingLarge{
+  margin: 0;
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+@mixin headingMedium{
+  margin: 0;
+  font-size: clamp(40px, 8vw, 60px);
+}
+
 @mixin headingBase {
   position: relative;
 

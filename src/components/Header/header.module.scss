@@ -63,6 +63,20 @@
   z-index: 1;
 }
 
+.logoSpinner{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 96px;
+  height: 96px;
+}
+
+.logoMain{
+  position: relative;
+  z-index: 1;
+}
+
 .listContainer{
   display: flex;
   align-items: center;

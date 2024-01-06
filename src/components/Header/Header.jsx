@@ -1,5 +1,6 @@
 import HeaderStyle from '@/components/Header/header.module.scss';
 import LogoSVG from '@/components/_icons/LogoSVG';
+import LogoSpinner from '@/components/_icons/LogoSpinner';
 import { navLinks } from '@/utils/configs/baseConfig';
 import Link from 'next/link';
 export default function Header() {
@@ -13,7 +14,12 @@ export default function Header() {
         aria-label='home'
       >
         <div className={HeaderStyle.logoContainer}>
-          <LogoSVG />
+          <div className={HeaderStyle.logoSpinner}>
+            <LogoSpinner />
+          </div>
+          <div className={HeaderStyle.logoMain}>
+            <LogoSVG />
+          </div>
         </div>
       </a>
     </div>

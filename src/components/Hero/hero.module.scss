@@ -41,7 +41,12 @@
     }
   }
 
+  &_h2{
+    @include headingLarge;
+  }
+
   &_h3{
+    @include headingLarge;
     margin-top: 5px;
     line-height: 0.9;
     color: $color04;
