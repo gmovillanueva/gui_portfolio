@@ -12,11 +12,27 @@
   z-index: 11;
   top: 0;
 
-  width: 100%;
+  width: 98%;
   height: $navHeight;
   padding: 0 50px;
 
   filter: none !important;
+
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+
+
+  &_show{
+    position: fixed;
+    transform: translateY(0);
+    height: $navScrollHeight;
+    background-color: $background;
+  }
+
+  &_hide{
+    transform: translateY(calc($navScrollHeight * -1));
+    height: $navScrollHeight;
+  }
 
   @include screen('lg', max){
     padding: 0 40px;
@@ -58,18 +74,9 @@
   }
 }
 
-.logoContainer{
-  position: relative;
-  z-index: 1;
-}
-
 .logoSpinner{
   position: absolute;
   z-index: -1;
-  top: 0;
-  left: 0;
-  width: 96px;
-  height: 96px;
 }
 
 .logoMain{
@@ -80,6 +87,7 @@
 .listContainer{
   display: flex;
   align-items: center;
+  margin-left: auto;
 
   @include screen('md', max){
     display: none;

@@ -3,7 +3,7 @@ import Contact from '@/components/Contact/Contact';
 import Experience from '@/components/Experience/Experience';
 import Hero from '@/components/Hero/Hero';
 
-import Header from '@/components/Header/Header';
+import Navigation from '@/components/Navigation/Navigation';
 
 import Projects from '@/components/Projects/Projects';
 import HomeStyle from '@/pages/_home.module.scss';
@@ -11,7 +11,7 @@ import HomeStyle from '@/pages/_home.module.scss';
 export default function Home() {
   return (
     <div id='home'>
-      <Header />
+      <Navigation />
       <div id='content'>
         <main className={HomeStyle.fillHeight}>
           <Hero />
