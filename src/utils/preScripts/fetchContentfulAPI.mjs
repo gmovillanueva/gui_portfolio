@@ -1,9 +1,11 @@
+'use server';
+
 import contentful from "contentful";
 import fs from "fs-extra";
 import path from 'path';
 import dotenv from 'dotenv';
 import {sanitizeJSON} from "./sanitizeJSON.mjs";
-import {customLog} from "../utils/customLogger/logger.mjs";
+import {customLog} from "../customLogger/logger.mjs";
 
 dotenv.config({ path: `.env.local`, override: true })
 
@@ -23,18 +25,6 @@ const writeCache = async (contentType, fetcheData) => {
     );
   })
 }
-
-export const readCache = async(contentType) =>{
-  const cacheFilePath = path.join(
-    process.cwd(),
-    'src/api/cache/'+contentType+'Sanitized.json',
-  );
-  try{
-    return fs.readJson(cacheFilePath);
-  } catch(error){
-    console.error(error);
-  }
-};
 
 export const fetchContentfulAPI = async (contentType) => {
   const contentfulClient = contentful.createClient({

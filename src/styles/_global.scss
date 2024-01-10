@@ -132,6 +132,7 @@ main{
 // Image Styles
 img,
 svg{
+  height: auto;
   width: 100%;
   max-width: 100%;
   vertical-align: middle;
@@ -145,7 +146,6 @@ img:not([alt]) {
 svg {
   width: 100%;
   height: 100%;
-  fill: currentColor;
   vertical-align: middle;
 
   &.feather {

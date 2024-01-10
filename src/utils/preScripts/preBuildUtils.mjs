@@ -1,4 +1,4 @@
-import {fetchContentfulAPI} from "../../api/fetchContentfulAPI.mjs";
+import {fetchContentfulAPI} from "./fetchContentfulAPI.mjs";
 
 export const preBuildDevelopment = async () => {
   await fetchContentfulAPI('experience');

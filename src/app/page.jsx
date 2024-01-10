@@ -1,5 +1,5 @@
 import Home from '@/pages/Home';
-import * as RootStyle from './page.module.scss';
+import RootStyle from './page.module.scss';
 
 export default function App() {
   return (

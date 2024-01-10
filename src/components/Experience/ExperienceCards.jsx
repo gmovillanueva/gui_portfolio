@@ -1,5 +1,3 @@
-'use client';
-
 import ContentfulImage from '@/api/contentfulImage';
 import ExperienceStyle from '@/components/Experience/experience.module.scss';
 import PropTypes from 'prop-types';
@@ -20,7 +18,6 @@ export default function ExperienceCards({ workEntry }) {
         id={ExperienceStyle.cardLink}
       >
         <ContentfulImage
-          className={workEntry.companyImage}
           alt='Photo'
           width={80}
           height={60}

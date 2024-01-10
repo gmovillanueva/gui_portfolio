@@ -1,13 +1,9 @@
-import { readCache } from '@/api/fetchContentfulAPI.mjs';
-import ExperienceStyle from '@/components/Experience/experience.module.scss';
 import ExperienceCards from '@/components/Experience/ExperienceCards';
+import ExperienceStyle from '@/components/Experience/experience.module.scss';
 
-export default async function Experience() {
-  let experience = await readCache('experience').then((workEntry) => {
-    return workEntry;
-  });
-
-  experience.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
+export default function Experience({ experience }) {
+  experience &&
+    experience.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
 
   return (
     <section id='experience'>
