@@ -2,7 +2,6 @@
 @import "../../styles/mixins";
 
 .heading{
-
   @include headingBase;
 }
 
@@ -20,18 +19,6 @@
   align-items: flex-start;
 
   max-width: 42rem;
-
-
-
-//  &:before{
-//    position: absolute;
-//    bottom: 0;
-//    top: 5rem;
-//    left: 2.25rem;
-//    height: calc(100% - 70px);
-//    width: 5px;
-//    background-color: $color_08;
-//  }
 }
 
 .cardLink{

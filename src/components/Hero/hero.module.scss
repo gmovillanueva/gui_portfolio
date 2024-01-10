@@ -36,17 +36,20 @@
     font-weight: 400;
     color: $color04;
 
-    @include screen('md', max){
+    @include screen('sm', max){
       margin: 0 0 20px 2px;
     }
   }
 
   &_h2{
+
     @include headingLarge;
   }
 
   &_h3{
+
     @include headingLarge;
+
     margin-top: 5px;
     line-height: 0.9;
     color: $color04;

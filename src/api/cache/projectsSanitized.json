@@ -165,15 +165,5 @@
       "TailwindCSS",
       "ViTest"
     ]
-  },
-  {
-    "projectTitle": "Capyba-UI",
-    "description": "Something 1\nSomething 2\nSomething 3",
-    "github": "https://github.com/gmovillanueva/capyba-ui",
-    "technology": [
-      "React",
-      "TypeScript",
-      "TailwindCSS"
-    ]
   }
 ]

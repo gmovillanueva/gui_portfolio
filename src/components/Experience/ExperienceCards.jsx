@@ -1,10 +1,11 @@
 'use client';
 
+import ContentfulImage from '@/api/contentfulImage';
 import ExperienceStyle from '@/components/Experience/experience.module.scss';
-import LogoSVG from '@/components/_icons/LogoSVG';
 import PropTypes from 'prop-types';
 
 export default function ExperienceCards({ workEntry }) {
+  let imageURL = String(workEntry.companyImage?.fields?.file?.url);
   const textArray = workEntry.bulletPoints.split('\n');
   return (
     <article
@@ -18,7 +19,13 @@ export default function ExperienceCards({ workEntry }) {
         className={ExperienceStyle.cardLink}
         id={ExperienceStyle.cardLink}
       >
-        <LogoSVG />
+        <ContentfulImage
+          className={workEntry.companyImage}
+          alt='Photo'
+          width={80}
+          height={60}
+          src={imageURL}
+        />
       </a>
       <div
         className={ExperienceStyle.cardBody}
@@ -61,5 +68,6 @@ ExperienceCards.propTypes = {
     currentlyHere: PropTypes.bool,
     jobTitle: PropTypes.string,
     companyName: PropTypes.string,
+    companyImage: PropTypes.object,
   }),
 };

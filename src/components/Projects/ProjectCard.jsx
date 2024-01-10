@@ -1,5 +1,6 @@
 import ContentfulImage from '@/api/contentfulImage';
 import ProjectsStyle from '@/components/Projects/projects.module.scss';
+import PropTypes from 'prop-types';
 export default function ProjectCard({ projectEntry }) {
   let imageURL = String(projectEntry.projectImage?.fields?.file?.url);
 
@@ -29,31 +30,6 @@ export default function ProjectCard({ projectEntry }) {
           )}
         </div>
       </div>
-      {/*        <div>
-          <p className={ProjectsStyle.ite}>Featured Project</p>
-
-          <h3 className={ProjectsStyle.project_title}>
-            {projectEntry.projectTitle}
-          </h3>
-
-          <div className={ProjectsStyle.project_description} />
-
-          {projectEntry.technology?.length && (
-            <ul className={ProjectsStyle.project_tech_list}>
-              {projectEntry.technology.map((technology, index) => (
-                <li key={index}>{technology}</li>
-              ))}
-            </ul>
-          )}
-
-          <div className={ProjectsStyle.project_links}>
-            <a
-              href={projectEntry.github}
-              aria-label='Github Link'
-            ></a>
-          </div>
-        </div>
-      </div>*/}
 
       <div className={ProjectsStyle.projectImageWrapper}>
         <div className={ProjectsStyle.projectImageDummy}>
@@ -69,3 +45,11 @@ export default function ProjectCard({ projectEntry }) {
     </li>
   );
 }
+
+ProjectCard.propTypes = {
+  projectEntry: PropTypes.shape({
+    projectImage: PropTypes.object,
+    projectTitle: PropTypes.string,
+    technology: PropTypes.array,
+  }),
+};

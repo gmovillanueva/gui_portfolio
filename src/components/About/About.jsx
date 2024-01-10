@@ -48,11 +48,11 @@ export default function About() {
             </p>
           </div>
 
-          <ul className={AboutStyle.skillsList}>
+          <ul className={AboutStyle.skillList}>
             {currentSkills &&
               currentSkills.map((skill, index) => (
                 <li
-                  className={AboutStyle.skills_list_item}
+                  className={AboutStyle.skillListItem}
                   key={index}
                 >
                   {skill}
@@ -61,14 +61,19 @@ export default function About() {
           </ul>
         </div>
 
-        <div id='image'>
-          <Image
-            className={AboutStyle.container_image}
-            src={heroImage}
-            width={400}
-            heihgt={400}
-            alt='Picture of Will'
-          />
+        <div
+          id='image'
+          className={AboutStyle.imageContainer}
+        >
+          <div className={AboutStyle.imageWrapper}>
+            <Image
+              className={AboutStyle.container_image}
+              src={heroImage}
+              width={300}
+              heihgt={300}
+              alt='Picture of Will'
+            />
+          </div>
         </div>
       </div>
     </section>

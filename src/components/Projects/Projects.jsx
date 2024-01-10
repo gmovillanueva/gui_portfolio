@@ -7,11 +7,8 @@ export default async function Projects() {
   });
 
   return (
-    <section
-      className={ProjectsStyle.jobSection}
-      id='projects'
-    >
-      <h2 className={ProjectsStyle.base_heading}>Cool things I have created</h2>
+    <section id='projects'>
+      <h2 className={ProjectsStyle.heading}>Cool things I have created</h2>
       <ul className={ProjectsStyle.list}>
         {projects &&
           projects.map((projectEntry, index) => {

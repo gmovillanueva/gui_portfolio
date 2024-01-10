@@ -23,17 +23,6 @@ export default function Navigation() {
     };
   });
 
-  /*  let navToggle = NavStyle.base;
-
-  if (scrollDirection === 'down' && !scrolledToTop) {
-    navToggle = clsx(NavStyle.base, NavStyle.hide);
-    return navToggle;
-  } else if (scrollDirection === 'up' && !scrolledToTop) {
-    navToggle = clsx(NavStyle.base, NavStyle.show);
-    return navToggle;
-
-  }*/
-
   const navToggle = () => {
     if (scrollDirection === 'down' && !scrolledToTop) {
       return clsx(NavStyle.base, NavStyle.base_hide);

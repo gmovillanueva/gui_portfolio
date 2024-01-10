@@ -6,7 +6,6 @@
 }
 
 .heading{
-
   @include headingBase;
 }
 
@@ -19,37 +18,6 @@
     display: block;
   }
 }
-
-.skillsList{
-  overflow: hidden;
-  display: grid;
-  grid-gap: 0 10px;
-  grid-template-columns: repeat(2, minmax(140px, 200px));
-
-  margin: 20px 0 0;
-  padding: 0;
-
-  list-style: none;
-
-  &_item{
-    position: relative;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    font-size: $fontsizeXS;
-
-    &before{
-      content: '▹';
-
-      position: absolute;
-      left: 0;
-
-      font-size: $fontsizeSM;
-      line-height: 12px;
-      color: $color08;
-    }
-  }
-}
-
 
 .container{
   display: grid;
@@ -77,6 +45,60 @@
   }
 }
 
+.skillList{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  grid-gap: 0 10px;
+  padding: 0;
+  margin: 20px 0 0 0;
+  overflow: hidden;
+  list-style: none;
+}
 
+.skillListItem{
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+
+  &:before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    line-height: 12px;
+  }
+}
+
+.imageContainer{
+  position: relative;
+  max-width: 300px;
+
+  @include screen('md', max){
+    margin: 50px auto 0;
+    width: 70%;
+  }
+}
+
+.imageWrapper{
+  display: block;
+  position: relative;
+  width: 100%;
+
+  &:before,
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: $borderRadius;
+  }
+
+  &:after{
+    border: 2px solid $color05;
+    top: 14px;
+    left:14px;
+    z-index: -1;
+  }
+}
 
 

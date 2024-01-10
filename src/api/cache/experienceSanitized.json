@@ -48,7 +48,7 @@
     "startDate": "2016-06-01T00:00-06:00",
     "endDate": "2018-06-01T00:00-06:00",
     "currentlyHere": false,
-    "bulletPoints": "Something 1\nSomething 2\nSomething 3",
+    "bulletPoints": "Addressed code complexity by segregating logic into distinct files, resulting in improved maintainability.\n\nImproved team efficiency by maintaining up-to-date and accessible documentation for all project components.\n\nExpanded the monorepo infrastructure to accommodate the creation of secure and public libraries, aligning with established design patterns.",
     "companyUrl": "https://engineering.tamu.edu/"
   },
   {
@@ -100,7 +100,7 @@
     "startDate": "2018-06-01T00:00-06:00",
     "endDate": "2021-06-01T00:00-06:00",
     "currentlyHere": false,
-    "bulletPoints": "Something 1\nSomething 2\nSomething 3",
+    "bulletPoints": "Spearheaded the initiative to make existing material A11y compliant, addressing accessibility gaps.\n\nEstablished a comprehensive style guide, standardizing code and visual elements to streamline collaboration between design and development teams.\n\nEnhanced user satisfaction through the delivery of an intuitive and visually appealing mobile interface.",
     "companyUrl": "https://dev.lykka.org/"
   },
   {
@@ -151,7 +151,7 @@
     "companyName": "Lykkå Village",
     "startDate": "2021-06-01T00:00-06:00",
     "currentlyHere": true,
-    "bulletPoints": "Something 1\nSomething 2\nSomething 3",
+    "bulletPoints": "Investigated and resolved performance bottlenecks in client-side rendering, significantly improving page-load times by using Next.js on a high-traffic social media platform.\n\nSpearheaded the adoption of CircleCI and Harness to streamline the CI/CD pipeline.\n\nEstablished a modular CSS structure using SCSS, increasing code readability and facilitating future updates",
     "companyUrl": "https://dev.lykka.org/"
   }
 ]
