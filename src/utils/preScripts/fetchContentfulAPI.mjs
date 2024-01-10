@@ -12,8 +12,9 @@ dotenv.config({ path: `.env.local`, override: true })
 const writeCache = async (contentType, fetcheData) => {
   const cacheFilePath = path.join(
     process.cwd(),
-    'src/api/cache/'+contentType+'Sanitized.json',
+    './src/api/cache/contentful/'+contentType+'Sanitized.json',
   );
+
   new Promise((resolve) => {
     fs.outputFile(
       cacheFilePath,

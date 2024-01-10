@@ -6,11 +6,12 @@
     "dev": "next dev",
     "prebuild:dev": "node src/utils/preScripts/preBuildDev.mjs",
     "build:dev": "next build",
-    "prebuild:prod": "node src/utils/preScripts/preBuildDev.mjs",
+    "prebuild:prod": "node src/utils/preScripts/preBuildProd.mjs",
     "build:prod": "next build",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "crossdev": "cross-env NODE_OPTIONS='--inspect' next dev"
   },
   "dependencies": {
     "@next/env": "^14.0.4",
@@ -31,6 +32,7 @@
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
     "clsx": "^2.0.0",
+    "cross-env": "^7.0.3",
     "depcheck": "^1.4.7",
     "dotenv": "^16.3.1",
     "eslint": "^8",
