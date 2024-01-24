@@ -1,11 +1,5 @@
-import About from '@/components/About/About';
-import Contact from '@/components/Contact/Contact';
-import Experience from '@/components/Experience/Experience';
-import Hero from '@/components/Hero/Hero';
-
 import Navigation from '@/components/Navigation/Navigation';
 
-import Projects from '@/components/Projects/Projects';
 import HomeStyle from '@/pages/_home.module.scss';
 
 export default function Home() {
@@ -14,11 +8,11 @@ export default function Home() {
       <Navigation />
       <div id='content'>
         <main className={HomeStyle.fillHeight}>
-          <Hero />
-          <About />
+          {/*          <Hero />
+                    <About />
           <Experience />
           <Projects />
-          <Contact />
+          <Contact />*/}
         </main>
       </div>
     </div>

@@ -40,3 +40,21 @@
     }
   }
 }
+
+@mixin baseLink{
+  position: relative;
+
+  display: inline-block;
+
+  color: inherit;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+
+  transition: $transition;
+
+  &:hover,
+  &:focus-visible {
+    color: $color05;
+    outline: 0;
+  }
+}

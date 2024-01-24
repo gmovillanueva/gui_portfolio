@@ -1,13 +1,18 @@
-import Home from '@/pages/Home';
+import About from '@/components/About/About';
+import Contact from '@/components/Contact/Contact';
+import Experience from '@/components/Experience/Experience';
+import Hero from '@/components/Hero/Hero';
+import Projects from '@/components/Projects/Projects';
 import RootStyle from './page.module.scss';
 
 export default function App() {
   return (
-    <div
-      id='root'
-      className={RootStyle.root}
-    >
-      <Home />
-    </div>
+    <main className={RootStyle.fillHeight}>
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
+    </main>
   );
 }

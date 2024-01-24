@@ -130,11 +130,12 @@ main{
 }
 
 // Image Styles
+
 img,
 svg{
-  height: auto;
   width: 100%;
   max-width: 100%;
+  height: auto;
   vertical-align: middle;
 }
 

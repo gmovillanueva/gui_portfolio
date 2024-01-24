@@ -1,0 +1,161 @@
+@import '../../styles/variables';
+@import "../../styles/mixins";
+
+.menu{
+  display: none;
+
+  @include screen('md', max){
+    display: block;
+  }
+}
+
+.button{
+  display: none;
+
+  @include screen('md', max){
+
+    @include flexCenter;
+
+    position: relative;
+    z-index: 10;
+
+    margin-right: -15px;
+    padding: 15px;
+
+    color: inherit;
+    text-transform: none;
+
+    background: transparent;
+    border: 0;
+
+    transition-timing-function: linear;
+    transition-duration: 0.15s;
+    transition-property: opacity, filter;
+  }
+
+  .menuBox{
+    position: relative;
+    display: inline-block;
+    width: $burgerWidth;
+    height: 24px;
+  }
+
+  .menuBoxInner{
+    top: 50%;
+    right: 0;
+
+    display: inline-block;
+
+    width: $burgerWidth;
+    height: 2px;
+
+    background-color: $color04;
+    border-radius: $borderRadius;
+
+    transition-duration: 0.22s;
+    transition-property: transform;
+
+    &::before,&::after{
+      content: '';
+
+      position: absolute;
+      right: 0;
+      left: auto;
+
+      display: block;
+
+      width: $burgerWidth;
+      height: 2px;
+
+      background-color: $color04;
+      border-radius: 4px;
+
+      transition-timing-function: ease;
+      transition-duration: 0.15s;
+      transition-property: transform;
+    }
+  }
+}
+
+.aside{
+  display: none;
+
+  @include screen('md', max){
+
+    @include flexCenter;
+
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: min(75vw, 400px);
+    height: 100vh;
+    padding: 50px 10px;
+
+    background-color: $color08;
+    outline: 0;
+    box-shadow: -10px 0 30px -15px $color08;
+
+  }
+
+  &_hide{
+    transform: translateX(100vw);
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.645,0.045,0.355,1);
+  }
+
+  &_show{
+    transform: translateX(0);
+    visibility: visible;
+    transition: all 0.4s cubic-bezier(0.645,0.045,0.355,1);
+  }
+
+  .nav{
+
+    @include flexCenter;
+
+    flex-direction: column;
+    width: 100%;
+    color: $color05;
+    text-align: center;
+  }
+
+  .outerList{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .innerList {
+      counter-increment: item 1;
+      position: relative;
+      margin: 0 auto 20px;
+      font-size: clamp($fontsizeSM, 4vw, $fontsizeLG);
+
+      @include screen('sm', max) {
+        margin: 0 auto 10px;
+      }
+
+      &::before {
+        content: '0' counter(item) '.';
+
+        display: block;
+
+        margin-bottom: 5px;
+
+        font-size: $fontsizeSM;
+        color: $color05;
+      }
+    }
+
+    .listLink{
+
+      @include baseLink;
+
+      width: 100%;
+      padding: 3px 20px 20px;
+    }
+  }
+}

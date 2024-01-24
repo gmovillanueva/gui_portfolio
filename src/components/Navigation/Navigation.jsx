@@ -1,5 +1,6 @@
 'use client';
 
+import HamburgerMenu from '@/components/Menu/Menu';
 import NavStyle from '@/components/Navigation/navigation.module.scss';
 import LogoSVG from '@/components/_icons/LogoSVG';
 import { navLinks } from '@/utils/configs/baseConfig';
@@ -74,7 +75,8 @@ export default function Navigation() {
               ))}
           </ol>
         </div>
-        <div id='header-nav-button'></div>
+
+        <HamburgerMenu />
       </nav>
     </header>
   );

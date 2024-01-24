@@ -1,4 +1,6 @@
 import LayoutStyle from '@/app/layout.module.scss';
+import Helmet from '@/components/Head/Head';
+import Navigation from '@/components/Navigation/Navigation';
 import '@/styles/_global.scss';
 import { JetBrains_Mono } from 'next/font/google';
 
@@ -14,15 +16,23 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <>
+      <html lang='en' />
+      <Helmet />
       <body className={jBrain.className}>
         <div
-          id='layout'
+          id='layoutBorder'
           className={LayoutStyle.borderRing}
         >
-          {children}
+          <div
+            id='root'
+            className={LayoutStyle.root}
+          >
+            <Navigation />
+            <div id='content'>{children}</div>
+          </div>
         </div>
       </body>
-    </html>
+    </>
   );
 }
