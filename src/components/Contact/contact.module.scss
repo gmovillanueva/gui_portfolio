@@ -5,3 +5,40 @@
 
   @include headingBase;
 }
+
+.section{
+  max-width: 600px;
+  margin: 0 auto 100px;
+  text-align: center;
+
+  @include screen('md', max){
+    margin: 0 auto 50px;
+  }
+
+  .topLine{
+    display: block;
+    margin-bottom: 20px;
+    font-size: $fontsizeMD;
+    font-weight: 400;
+
+    &::before{
+      bottom: 0;
+      font-size: $fontsizeSM;
+    }
+
+    &::after{
+      display: none;
+    }
+  }
+
+  .title{
+    font-size: clamp(40px, 5vw, 60px);
+  }
+
+  .emailLink{
+
+    @include bigButton;
+
+    margin-top: 50px;
+  }
+}

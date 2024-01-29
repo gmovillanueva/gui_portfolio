@@ -17,4 +17,5 @@ module.exports = {
       url: '/#contact',
     },
   ],
+  email: 'willgmo.newton@gmail.com',
 };

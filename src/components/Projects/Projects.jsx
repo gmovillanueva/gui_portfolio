@@ -5,7 +5,7 @@ import ProjectsStyle from '@/components/Projects/projects.module.scss';
 export default function Projects() {
   return (
     <section id='projects'>
-      <h2 className={ProjectsStyle.heading}>Cool things I have created</h2>
+      <h2 className={ProjectsStyle.heading}>03. A Few Projects</h2>
       <ul className={ProjectsStyle.list}>
         {projects &&
           projects.map((projectEntry, index) => {

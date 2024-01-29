@@ -22,7 +22,7 @@
   width: 100%;
   margin: 10px 0 40px;
 
-  font-size: clamp(26px, 5vw, $fontsizeH);
+  font-size: clamp($fontsizeSM, 5vw, $fontsizeH);
   white-space: nowrap;
 
   @include headingBaseBeforeAfter
@@ -31,12 +31,12 @@
 
 @mixin headingBaseBeforeAfter {
 
-  &::before{
+/*  &::before{
     content: '0' counter(section) '.';
     counter-increment: section;
 
     position: relative;
-    bottom: 4px;
+    bottom: 0;
 
     margin-right: 10px;
 
@@ -48,13 +48,13 @@
       margin-right: 5px;
       margin-bottom: -3px;
     }
-  }
+  }*/
 
   &::after{
     content: '';
 
     position: relative;
-    top: -5px;
+    top: 0;
 
     display: block;
 

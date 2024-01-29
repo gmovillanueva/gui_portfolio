@@ -1,4 +1,5 @@
 import LayoutStyle from '@/app/layout.module.scss';
+import Background from '@/components/Background/Background';
 import Helmet from '@/components/Head/Head';
 import Navigation from '@/components/Navigation/Navigation';
 import '@/styles/_global.scss';
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
             id='root'
             className={LayoutStyle.root}
           >
+            <Background />
             <Navigation />
             <div id='content'>{children}</div>
           </div>

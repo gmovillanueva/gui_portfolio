@@ -1,5 +1,6 @@
 // Contains all link mixins
 @import "../variables";
+
 @mixin smallButton {
   padding: 0.75rem 1rem;
 
@@ -19,6 +20,32 @@
     transform: translate(-4px, -4px);
     outline: none;
     box-shadow: 3px 3px 0 0 $color04;
+  }
+
+  &::after {
+    display: none !important;
+  }
+}
+
+@mixin bigButton {
+  padding: 1.25rem 1.75rem;
+
+  font-size: $fontsizeSM;
+  line-height: 1;
+  color: $color04;
+  text-decoration: none;
+
+  background-color: transparent;
+  border: 1px solid $color04;
+  border-radius: 4px;
+
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover,
+  &:focus-visible {
+    transform: translate(-5px, -5px);
+    outline: none;
+    box-shadow: 4px 4px 0 0 $color04;
   }
 
   &::after {

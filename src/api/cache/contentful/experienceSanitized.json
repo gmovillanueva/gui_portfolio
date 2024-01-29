@@ -68,7 +68,7 @@
         "id": "4tURGWkBQ2zBp1fQBeAoTt",
         "type": "Asset",
         "createdAt": "2023-12-20T22:06:14.262Z",
-        "updatedAt": "2023-12-20T22:06:14.262Z",
+        "updatedAt": "2024-01-29T16:39:30.214Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -76,19 +76,19 @@
             "linkType": "Environment"
           }
         },
-        "revision": 1,
+        "revision": 2,
         "locale": "en-US"
       },
       "fields": {
         "title": "Lykka Logo",
         "description": "Logo for Lykka",
         "file": {
-          "url": "//images.ctfassets.net/ceuo2r49xzud/4tURGWkBQ2zBp1fQBeAoTt/a047ae233d2d28d60b99e6fe9104c0c9/Logo_001.webp",
+          "url": "//images.ctfassets.net/ceuo2r49xzud/4tURGWkBQ2zBp1fQBeAoTt/c812a0b1d0d24d059254af4f1a1ba845/Logo_001.webp",
           "details": {
-            "size": 155066,
+            "size": 14548,
             "image": {
-              "width": 4000,
-              "height": 4000
+              "width": 720,
+              "height": 576
             }
           },
           "fileName": "Logo_001.webp",
@@ -120,7 +120,7 @@
         "id": "4tURGWkBQ2zBp1fQBeAoTt",
         "type": "Asset",
         "createdAt": "2023-12-20T22:06:14.262Z",
-        "updatedAt": "2023-12-20T22:06:14.262Z",
+        "updatedAt": "2024-01-29T16:39:30.214Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -128,19 +128,19 @@
             "linkType": "Environment"
           }
         },
-        "revision": 1,
+        "revision": 2,
         "locale": "en-US"
       },
       "fields": {
         "title": "Lykka Logo",
         "description": "Logo for Lykka",
         "file": {
-          "url": "//images.ctfassets.net/ceuo2r49xzud/4tURGWkBQ2zBp1fQBeAoTt/a047ae233d2d28d60b99e6fe9104c0c9/Logo_001.webp",
+          "url": "//images.ctfassets.net/ceuo2r49xzud/4tURGWkBQ2zBp1fQBeAoTt/c812a0b1d0d24d059254af4f1a1ba845/Logo_001.webp",
           "details": {
-            "size": 155066,
+            "size": 14548,
             "image": {
-              "width": 4000,
-              "height": 4000
+              "width": 720,
+              "height": 576
             }
           },
           "fileName": "Logo_001.webp",

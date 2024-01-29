@@ -6,7 +6,7 @@ export default function About() {
   const currentSkills = [
     'JavaScript',
     'TypeScript',
-    'Next',
+    'Next.JS',
     'React',
     'Node.js',
     'C#',
@@ -16,35 +16,28 @@ export default function About() {
       id='about'
       className={AboutStyle.section}
     >
-      <h2 className={AboutStyle.heading}>About Me</h2>
+      <h2 className={AboutStyle.heading}>01. About Me</h2>
 
       <div className={AboutStyle.grid}>
         <div id='text_content'>
           <div id='paragraphs'>
             <p className={AboutStyle.container_text}>
-              Hello, fellow coffee drinker! Thank you for showing such keen
-              interest in me. I am guessing you want to know more about me?
-              Hmmm... Where to begin...
+              Hello everyone! My name is William, and I enjoy creating things,
+              whether they live on the internet, in a physical space, or even on
+              my hard drive. My passion for software development started in 2003
+              when I started using a computer and became curious about how the
+              computer knew what the user was doing. That led me down the rabbit
+              hole of programming, which taught me a ton of how computers
+              operate.
             </p>
             <p className={AboutStyle.container_text}>
-              In a galaxy very far far away...
+              Fast-forwarding today, I have worked at a Tier-1 university, a
+              start-up, and free-lanced for corporations, contributing to my
+              growth. My current focus is building products and digital
+              experiences for various clients.
             </p>
             <p className={AboutStyle.container_text}>
-              Alright, all jokes aside. As you probably know by now, I am
-              William Newton, a full-stack developer born and raised in Texas,
-              United States. No, we do not ride horses everywhere that is only
-              reserved for Sundays. What else can I say? I am passionate about
-              programming, solving complex problems, and creating random things.
-              My interest in programming started when I took my electronics
-              apart as a child (yes, I was one of those). The curiosity was
-              intense in this one; as I grew older, I started asking questions
-              about how the electronics knew what to do. Going down the rabbit
-              hole led to learning about binary and Assembly... Since then, I
-              have had nightmares about Assembly. After my rough encounter with
-              Assembly, I eventually moved to C/C++ and finally to web
-              development. Fast-forwarding to today, I have worked at a Tier 1
-              university, a start-up and free-lanced. My primary focus is
-              building accessible products and digital experiences.
+              Below are some technologies I have worked with recently:
             </p>
           </div>
 

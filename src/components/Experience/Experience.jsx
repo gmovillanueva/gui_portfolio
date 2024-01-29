@@ -1,5 +1,5 @@
 import experience from '@/api/cache/experienceSanitized.json';
-import ExperienceCards from '@/components/Experience/ExperienceCards';
+import ExperienceCard from '@/components/Experience/ExperienceCard';
 import ExperienceStyle from '@/components/Experience/experience.module.scss';
 export default function Experience() {
   experience &&
@@ -7,7 +7,7 @@ export default function Experience() {
 
   return (
     <section id='experience'>
-      <h2 className={ExperienceStyle.heading}>Where I have worked</h2>
+      <h2 className={ExperienceStyle.heading}>02. Where I have worked</h2>
       <div
         className={ExperienceStyle.grid}
         id='timeline_grid'
@@ -15,7 +15,7 @@ export default function Experience() {
         {experience &&
           experience.map((workEntry, index) => {
             return (
-              <ExperienceCards
+              <ExperienceCard
                 key={index}
                 workEntry={workEntry}
               />

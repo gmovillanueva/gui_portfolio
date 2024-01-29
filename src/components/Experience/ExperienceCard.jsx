@@ -2,7 +2,7 @@ import ContentfulImage from '@/api/contentfulImage';
 import ExperienceStyle from '@/components/Experience/experience.module.scss';
 import PropTypes from 'prop-types';
 
-export default function ExperienceCards({ workEntry }) {
+export default function ExperienceCard({ workEntry }) {
   let imageURL = String(workEntry.companyImage?.fields?.file?.url);
   const textArray = workEntry.bulletPoints.split('\n');
   return (
@@ -18,6 +18,7 @@ export default function ExperienceCards({ workEntry }) {
         id={ExperienceStyle.cardLink}
       >
         <ContentfulImage
+          className={ExperienceStyle.cardImage}
           alt='Photo'
           width={80}
           height={60}
@@ -56,7 +57,7 @@ export default function ExperienceCards({ workEntry }) {
   );
 }
 
-ExperienceCards.propTypes = {
+ExperienceCard.propTypes = {
   workEntry: PropTypes.shape({
     companyUrl: PropTypes.string,
     bulletPoints: PropTypes.string,
