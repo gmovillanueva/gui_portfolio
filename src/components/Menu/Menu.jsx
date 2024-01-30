@@ -3,17 +3,15 @@
 import MenuStyle from '@/components/Menu/menu.module.scss';
 import { navLinks } from '@/utils/configs/baseConfig';
 import useOnClickOutside from '@/utils/hooks/useOnClickOutside';
+import { useDrawerStore } from '@store/menuStore';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 function HamburgerMenu() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [styleState, setStyleState] = useState('');
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const { toggleDrawer: toggleDrawer } = useDrawerStore();
+  const { openDrawer: curDrawerState } = useDrawerStore();
+  const { closeDrawer: closeDrawer } = useDrawerStore();
 
   const buttonRef = useRef(null);
   const navRef = useRef(null);
@@ -49,7 +47,7 @@ function HamburgerMenu() {
     switch (event.key) {
       case 'Escape':
       case 'Esc': {
-        setMenuOpen(false);
+        closeDrawer();
         break;
       }
 
@@ -74,7 +72,7 @@ function HamburgerMenu() {
 
   const onResize = (event) => {
     if (event.currentTarget.innerWidth > 768) {
-      setMenuOpen(false);
+      closeDrawer();
     }
   };
 
@@ -90,25 +88,56 @@ function HamburgerMenu() {
     };
   }, [onKeyDown, setFocusable]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     let tempStyle = '';
+    const contentEl = document.getElementById('content');
+    const particleEl = document.getElementById('background');
+    const headerEl = document.getElementById('header');
     if (menuOpen) {
       tempStyle = MenuStyle.aside_show;
+      contentEl && contentEl.classList.add(MenuStyle.aside_show_content);
+      particleEl &&
+        particleEl.classList.add(MenuStyle.aside_show_particleCanvas);
+      headerEl && headerEl.classList.add(MenuStyle.aside_show_header);
     } else {
       tempStyle = MenuStyle.aside_hide;
+      contentEl && contentEl.classList.remove(MenuStyle.aside_show_content);
+      particleEl &&
+        particleEl.classList.remove(MenuStyle.aside_show_particleCanvas);
+      headerEl && headerEl.classList.remove(MenuStyle.aside_show_header);
     }
     setStyleState(tempStyle);
-  }, [menuOpen]);
+  }, [menuOpen]);*/
 
   const wrapperRef = useRef();
-  useOnClickOutside(wrapperRef, () => setMenuOpen(false));
+  useOnClickOutside(wrapperRef, () => closeDrawer());
+
+  useEffect(() => {
+    const contentEl = document.getElementById('content');
+    const particleEl = document.getElementById('background');
+
+    if (curDrawerState) {
+      contentEl && contentEl.classList.add(MenuStyle.aside_show_content);
+      particleEl &&
+        particleEl.classList.add(MenuStyle.aside_show_particleCanvas);
+    } else {
+      contentEl && contentEl.classList.remove(MenuStyle.aside_show_content);
+      particleEl &&
+        particleEl.classList.remove(MenuStyle.aside_show_particleCanvas);
+    }
+  }, [curDrawerState]);
+
+  const formatNumber = (index) => {
+    let value = index + 1;
+    return `0${value}.`;
+  };
 
   return (
     <div className={MenuStyle.menu}>
       <div ref={wrapperRef}>
         <button
           className={MenuStyle.button}
-          onClick={() => toggleMenu()}
+          onClick={toggleDrawer}
           ref={buttonRef}
           aria-label='Menu'
         >
@@ -118,9 +147,12 @@ function HamburgerMenu() {
         </button>
       </div>
       <aside
-        className={clsx(MenuStyle.aside, styleState)}
-        aria-hidden={!menuOpen}
-        tabIndex={menuOpen ? 1 : -1}
+        className={clsx(
+          MenuStyle.aside,
+          curDrawerState ? MenuStyle.aside_show : MenuStyle.aside_hide,
+        )}
+        aria-hidden={!curDrawerState}
+        tabIndex={curDrawerState ? 1 : -1}
       >
         <nav
           className={MenuStyle.nav}
@@ -136,9 +168,12 @@ function HamburgerMenu() {
                   <Link
                     href={url}
                     className={MenuStyle.listLink}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={() => closeDrawer()}
                   >
-                    {name}
+                    <span className={MenuStyle.nav_span}>
+                      {formatNumber(index)}
+                    </span>
+                    {' ' + name}
                   </Link>
                 </li>
               ))}

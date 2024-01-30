@@ -5,10 +5,12 @@ import NavStyle from '@/components/Navigation/navigation.module.scss';
 import LogoSVG from '@/components/_icons/LogoSVG';
 import { navLinks } from '@/utils/configs/baseConfig';
 import useScrollDirection from '@/utils/hooks/useScrollDirection';
+import { useDrawerStore } from '@store/menuStore';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 export default function Navigation() {
+  const { openDrawer: curDrawerState } = useDrawerStore();
   const [scrolledToTop, setScrolledToTop] = useState(true);
   const scrollDirection = useScrollDirection('down');
 
@@ -34,6 +36,14 @@ export default function Navigation() {
     }
   };
 
+  const clearHeader = () => {
+    if (curDrawerState) {
+      return clsx(navToggle(), NavStyle.base_clear);
+    } else {
+      return navToggle();
+    }
+  };
+
   const userLogo = (
     <div
       className={NavStyle.logo}
@@ -50,7 +60,7 @@ export default function Navigation() {
     </div>
   );
   return (
-    <header className={navToggle()}>
+    <header className={clearHeader()}>
       <nav
         id='header-nav'
         className={NavStyle.nav}

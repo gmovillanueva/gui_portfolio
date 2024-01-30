@@ -41,7 +41,7 @@
 .cardImage {
 
   @include screen('md', max) {
-    width: 100%;
+    width: 80px;
     height: auto;
     object-fit: cover;
   }

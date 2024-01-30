@@ -6,7 +6,7 @@ import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { useEffect, useState } from 'react';
 import { loadFull } from 'tsparticles';
 
-export default function Background() {
+function Particle() {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -19,9 +19,7 @@ export default function Background() {
     });
   }, []);
 
-  const particlesLoaded = (container) => {
-    console.log(container._options);
-  };
+  const particlesLoaded = (container) => {};
 
   if (init) {
     return (
@@ -34,4 +32,16 @@ export default function Background() {
   }
 
   return <></>;
+}
+
+export default function Background() {
+  /*  const { openDrawer: curDrawerState } = useDrawerStore();*/
+
+  return (
+    <div
+    /*className={curDrawerState ? CanvasStyle.canvas_blur : CanvasStyle.canvas}*/
+    >
+      <Particle />
+    </div>
+  );
 }

@@ -20,8 +20,6 @@
 
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-
-
   &_show{
     position: fixed;
     transform: translateY(0);
@@ -32,6 +30,10 @@
   &_hide{
     transform: translateY(calc($navScrollHeight * -1));
     height: $navScrollHeight;
+  }
+
+  &_clear{
+    background-color: transparent;
   }
 
   @include screen('lg', max){

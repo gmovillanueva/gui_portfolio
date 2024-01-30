@@ -49,11 +49,30 @@
     width: $burgerWidth;
     height: 2px;
 
-    background-color: $color04;
+    background-color: $color11;
     border-radius: $borderRadius;
 
     transition-duration: 0.22s;
     transition-property: transform;
+
+    &_show{
+      transition-delay: 0.12s;
+      transform: rotate(225deg);
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      &::before{
+        width: 100%;
+        top: 0;
+        opacity: 0;
+        transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+      }
+    }
+
+    &_hide{
+      transition-delay: 0s;
+      transform: rotate(0deg);
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    }
 
     &::before,&::after{
       content: '';
@@ -67,7 +86,7 @@
       width: $burgerWidth;
       height: 2px;
 
-      background-color: $color04;
+      background-color: $color11;
       border-radius: 4px;
 
       transition-timing-function: ease;
@@ -94,9 +113,9 @@
     height: 100vh;
     padding: 50px 10px;
 
-    background-color: $color08;
+    background-color: $color01;
     outline: 0;
-    box-shadow: -10px 0 30px -15px $color08;
+    box-shadow: -10px 0 30px -15px $color01;
 
   }
 
@@ -104,12 +123,25 @@
     transform: translateX(100vw);
     visibility: hidden;
     transition: all 0.4s cubic-bezier(0.645,0.045,0.355,1);
+
   }
 
   &_show{
     transform: translateX(0);
     visibility: visible;
     transition: all 0.4s cubic-bezier(0.645,0.045,0.355,1);
+
+    &_content{
+      filter: blur(5px);
+    }
+
+    &_particleCanvas{
+
+     & > canvas{
+       filter: blur(5px);
+     }
+    }
+
   }
 
   .nav{
@@ -118,8 +150,12 @@
 
     flex-direction: column;
     width: 100%;
-    color: $color05;
+    color: $foreground;
     text-align: center;
+
+    &_span{
+      color: $color11;
+    }
   }
 
   .outerList{
@@ -129,24 +165,12 @@
     list-style: none;
 
     .innerList {
-      counter-increment: item 1;
       position: relative;
       margin: 0 auto 20px;
       font-size: clamp($fontsizeSM, 4vw, $fontsizeLG);
 
       @include screen('sm', max) {
         margin: 0 auto 10px;
-      }
-
-      &::before {
-        content: '0' counter(item) '.';
-
-        display: block;
-
-        margin-bottom: 5px;
-
-        font-size: $fontsizeSM;
-        color: $color05;
       }
     }
 
