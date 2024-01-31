@@ -33,7 +33,7 @@
     transition-property: opacity, filter;
 
 /*    width: $burgerWidth;
-    height: 24px;*/
+    height: 24px; */
   }
 
   .menuBox{
@@ -45,21 +45,29 @@
 
 
   .checked{
+
     &_crossLines{
       transform: translateX(30px);
+
       @include pathLength(22.627416998, 111.22813415527344, -16.9705627485, $color11)
     }
+
     &_centerLine{
       transform: translateX(30px);
+
       @include pathLength(0, 99, -20, $color11)
     }
   }
 
   .unChecked{
+
     &_crossLines{
+
       @include pathLength(24, 111.22813415527344, -50.22813415527344, $color11)
     }
+
     &_centerLine{
+
       @include pathLength(24, 99, -38, $color11)
     }
   }
@@ -81,21 +89,21 @@
     transition-property: transform;
 
     &_show{
-      transition-delay: 0.12s;
       transform: rotate(225deg);
+      transition-delay: 0.12s;
       transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
       &::before{
-        width: 100%;
         top: 0;
+        width: 100%;
         opacity: 0;
         transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
       }
     }
 
     &_hide{
-      transition-delay: 0s;
       transform: rotate(0deg);
+      transition-delay: 0s;
       transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
     }
 
