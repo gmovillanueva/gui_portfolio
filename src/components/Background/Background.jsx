@@ -19,7 +19,9 @@ function Particle() {
     });
   }, []);
 
-  const particlesLoaded = (container) => {};
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
 
   if (init) {
     return (
