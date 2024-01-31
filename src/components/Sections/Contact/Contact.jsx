@@ -1,5 +1,5 @@
-import ContactStyle from '@/components/Contact/contact.module.scss';
-import { email } from '@/utils/configs/baseConfig';
+import ContactStyle from '@components/Sections/Contact/contact.module.scss';
+import { email } from '@utils/configs/baseConfig';
 import clsx from 'clsx';
 export default function Contact() {
   let customHeader = clsx(ContactStyle.header, ContactStyle.topLine);

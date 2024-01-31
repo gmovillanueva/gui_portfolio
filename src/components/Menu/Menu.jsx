@@ -117,13 +117,19 @@ function HamburgerMenu() {
     const particleEl = document.getElementById('background');
 
     if (curDrawerState) {
+      contentEl && contentEl.classList.remove(MenuStyle.aside_hide_content);
       contentEl && contentEl.classList.add(MenuStyle.aside_show_content);
+      particleEl &&
+        particleEl.classList.remove(MenuStyle.aside_hide_particleCanvas);
       particleEl &&
         particleEl.classList.add(MenuStyle.aside_show_particleCanvas);
     } else {
       contentEl && contentEl.classList.remove(MenuStyle.aside_show_content);
+      contentEl && contentEl.classList.add(MenuStyle.aside_hide_content);
       particleEl &&
         particleEl.classList.remove(MenuStyle.aside_show_particleCanvas);
+      particleEl &&
+        particleEl.classList.add(MenuStyle.aside_hide_particleCanvas);
     }
   }, [curDrawerState]);
 
@@ -141,10 +147,48 @@ function HamburgerMenu() {
           ref={buttonRef}
           aria-label='Menu'
         >
+          <svg
+            className={MenuStyle.menuBox}
+            viewBox='0 0 100 100'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              className={
+                curDrawerState
+                  ? MenuStyle.checked_crossLines
+                  : MenuStyle.unChecked_crossLines
+              }
+              d='M0 70l28-28c2-2 2-2 7-2h64'
+            />
+            <path
+              className={
+                curDrawerState
+                  ? MenuStyle.checked_centerLine
+                  : MenuStyle.unChecked_centerLine
+              }
+              d='M0 50h99'
+            />
+            <path
+              className={
+                curDrawerState
+                  ? MenuStyle.checked_crossLines
+                  : MenuStyle.unChecked_crossLines
+              }
+              d='M0 30l28 28c2 2 2 2 7 2h64'
+            />
+          </svg>
+        </button>
+        {/*<MenuCheckBox />*/}
+        {/*        <button
+          className={MenuStyle.button}
+          onClick={toggleDrawer}
+          ref={buttonRef}
+          aria-label='Menu'
+        >
           <div className={MenuStyle.menuBox}>
             <div className={MenuStyle.menuBoxInner} />
           </div>
-        </button>
+        </button>*/}
       </div>
       <aside
         className={clsx(

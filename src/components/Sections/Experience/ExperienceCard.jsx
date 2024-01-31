@@ -1,5 +1,5 @@
-import ContentfulImage from '@/api/contentfulImage';
-import ExperienceStyle from '@/components/Experience/experience.module.scss';
+import ContentfulImage from '@api/contentfulImage';
+import ExperienceStyle from '@components/Sections/Experience/experience.module.scss';
 import PropTypes from 'prop-types';
 
 export default function ExperienceCard({ workEntry }) {

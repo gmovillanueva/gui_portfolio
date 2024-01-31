@@ -1,8 +1,8 @@
 import LayoutStyle from '@/app/layout.module.scss';
 import Background from '@/components/Background/Background';
-import Helmet from '@/components/Head/Head';
 import Navigation from '@/components/Navigation/Navigation';
 import '@/styles/_global.scss';
+import Helmet from '@components/Helmet/Helmet';
 import { JetBrains_Mono } from 'next/font/google';
 
 const jBrain = JetBrains_Mono({

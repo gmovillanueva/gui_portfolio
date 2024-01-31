@@ -1,0 +1,14 @@
+// Contains all path mixins
+
+@mixin pathLength($length, $totalLength, $offset, $strokeColor){
+
+  fill: none;
+  stroke: $strokeColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: all .6s cubic-bezier(.645, .045, .355, 1);
+
+  stroke-dasharray: $length $totalLength;
+  stroke-dashoffset: $offset;
+}

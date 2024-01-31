@@ -1,4 +1,4 @@
-import AboutStyle from '@/components/About/about.module.scss';
+import AboutStyle from '@components/Sections/About/about.module.scss';
 import heroImage from '@public/images/heroimage.webp';
 import Image from 'next/image';
 

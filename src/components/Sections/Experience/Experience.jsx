@@ -1,6 +1,6 @@
-import experience from '@/api/cache/experienceSanitized.json';
-import ExperienceCard from '@/components/Experience/ExperienceCard';
-import ExperienceStyle from '@/components/Experience/experience.module.scss';
+import experience from '@api/cache/experienceSanitized.json';
+import ExperienceCard from '@components/Sections/Experience/ExperienceCard';
+import ExperienceStyle from '@components/Sections/Experience/experience.module.scss';
 export default function Experience() {
   experience &&
     experience.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));

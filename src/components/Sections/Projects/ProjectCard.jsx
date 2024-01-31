@@ -1,5 +1,5 @@
-import ContentfulImage from '@/api/contentfulImage';
-import ProjectsStyle from '@/components/Projects/projects.module.scss';
+import ContentfulImage from '@api/contentfulImage';
+import ProjectsStyle from '@components/Sections/Projects/projects.module.scss';
 import PropTypes from 'prop-types';
 export default function ProjectCard({ projectEntry }) {
   let imageURL = String(projectEntry.projectImage?.fields?.file?.url);

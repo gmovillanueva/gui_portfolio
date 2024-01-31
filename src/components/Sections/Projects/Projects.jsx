@@ -1,6 +1,6 @@
-import projects from '@/api/cache/projectsSanitized.json';
-import ProjectCard from '@/components/Projects/ProjectCard';
-import ProjectsStyle from '@/components/Projects/projects.module.scss';
+import projects from '@api/cache/projectsSanitized.json';
+import ProjectCard from '@components/Sections/Projects/ProjectCard';
+import ProjectsStyle from '@components/Sections/Projects/projects.module.scss';
 
 export default function Projects() {
   return (

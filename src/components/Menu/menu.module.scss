@@ -31,14 +31,39 @@
     transition-timing-function: linear;
     transition-duration: 0.15s;
     transition-property: opacity, filter;
+
+/*    width: $burgerWidth;
+    height: 24px;*/
   }
 
   .menuBox{
     position: relative;
     display: inline-block;
-    width: $burgerWidth;
-    height: 24px;
+    width: auto;
+    height: 6rem;
   }
+
+
+  .checked{
+    &_crossLines{
+      transform: translateX(30px);
+      @include pathLength(22.627416998, 111.22813415527344, -16.9705627485, $color11)
+    }
+    &_centerLine{
+      transform: translateX(30px);
+      @include pathLength(0, 99, -20, $color11)
+    }
+  }
+
+  .unChecked{
+    &_crossLines{
+      @include pathLength(24, 111.22813415527344, -50.22813415527344, $color11)
+    }
+    &_centerLine{
+      @include pathLength(24, 99, -38, $color11)
+    }
+  }
+
 
   .menuBoxInner{
     top: 50%;
@@ -117,12 +142,25 @@
     outline: 0;
     box-shadow: -10px 0 30px -15px $color01;
 
+    transition: all 0.4s cubic-bezier(0.645,0.045,0.355,1);
+
   }
 
   &_hide{
     transform: translateX(100vw);
     visibility: hidden;
     transition: all 0.4s cubic-bezier(0.645,0.045,0.355,1);
+
+    &_content{
+      transition: all 0.4s cubic-bezier(0.645,0.045,0.355,1);
+    }
+
+    &_particleCanvas{
+
+      & > canvas{
+        transition: all 0.4s cubic-bezier(0.645,0.045,0.355,1);
+      }
+    }
 
   }
 
@@ -133,12 +171,14 @@
 
     &_content{
       filter: blur(5px);
+      transition: all 0.4s cubic-bezier(0.645,0.045,0.355,1);
     }
 
     &_particleCanvas{
 
      & > canvas{
        filter: blur(5px);
+       transition: all 0.4s cubic-bezier(0.645,0.045,0.355,1);
      }
     }
 
