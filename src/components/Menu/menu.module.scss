@@ -19,7 +19,7 @@
     position: relative;
     z-index: 10;
 
-    margin-right: -15px;
+    margin-right: -3.5rem;
     padding: 15px;
 
     color: inherit;
@@ -49,7 +49,7 @@
     &_crossLines{
       transform: translateX(30px);
 
-      @include pathLength(22.627416998, 111.22813415527344, -16.9705627485, $color11)
+      @include pathLength(22.6274, 111.2281, -16.9705, $color11)
     }
 
     &_centerLine{
@@ -63,7 +63,7 @@
 
     &_crossLines{
 
-      @include pathLength(24, 111.22813415527344, -50.22813415527344, $color11)
+      @include pathLength(24, 111.22813, -50.2281, $color11)
     }
 
     &_centerLine{
