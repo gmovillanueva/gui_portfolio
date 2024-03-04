@@ -2,7 +2,7 @@ import LayoutStyle from '@/app/layout.module.scss';
 import Background from '@/components/Background/Background';
 import Navigation from '@/components/Navigation/Navigation';
 import '@/styles/_global.scss';
-import Helmet from '@components/Helmet/Helmet';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { JetBrains_Mono } from 'next/font/google';
 
 const jBrain = JetBrains_Mono({
@@ -11,15 +11,25 @@ const jBrain = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: 'Portfolio',
-  description: 'Created by Will Newton',
+  title: "Will's Portfolio GUI",
+  description: "A Portfolio 'GUI' for William Newton's terminal portfolio.",
+  generator: 'Next.js',
+  applicationName: 'GUI Portfolio',
+  keywords: ['Next.js', 'React', 'JavaScript', 'SCSS', 'Portfolio'],
+  authors: [{ name: 'William' }],
+  creator: 'William Newton',
+  publisher: 'William Newton',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <>
       <html lang='en' />
-      <Helmet />
       <body className={jBrain.className}>
         <div
           id='layoutBorder'
@@ -34,6 +44,7 @@ export default function RootLayout({ children }) {
             <div id='content'>{children}</div>
           </div>
         </div>
+        <SpeedInsights />
       </body>
     </>
   );
