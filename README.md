@@ -24,7 +24,6 @@ I am a huge fan of Linux, and my main portfolio is based of a terminal which peo
 ## Upcoming Features
 
 - Add themes
-- Add contact me
 - Allow switching between GUI and Prompt
 - Docker support
 
